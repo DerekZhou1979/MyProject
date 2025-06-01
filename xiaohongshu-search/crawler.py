@@ -17,16 +17,12 @@ from urllib.parse import quote
 import re
 import os
 
-# 对于Selenium用户
-try:
-    from selenium import webdriver
-    from selenium.webdriver.chrome.options import Options
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    SELENIUM_AVAILABLE = True
-except ImportError:
-    SELENIUM_AVAILABLE = False
+# 导入Selenium相关库
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -57,7 +53,7 @@ class XiaoHongShuCrawler:
             proxy (str): 代理服务器地址，如 "127.0.0.1:7890"
             cookies_file (str): cookie文件路径，用于免登录访问
         """
-        self.use_selenium = use_selenium and SELENIUM_AVAILABLE
+        self.use_selenium = True  # 强制使用Selenium
         self.headless = headless
         self.proxy = proxy
         self.cookies_file = cookies_file
@@ -73,8 +69,12 @@ class XiaoHongShuCrawler:
         # 加载cookie
         self.cookies = self._load_cookies()
         
-        if self.use_selenium:
-            self._init_selenium()
+        # 初始化Selenium
+        self._init_selenium()
+        
+        # 如果Selenium初始化失败，抛出异常
+        if not self.driver:
+            raise RuntimeError("Selenium初始化失败，请确保已安装Chrome浏览器和相应的WebDriver")
     
     def _load_cookies(self):
         """加载cookie"""
@@ -164,11 +164,12 @@ class XiaoHongShuCrawler:
         """初始化Selenium"""
         try:
             from selenium.webdriver.chrome.service import Service
-            from webdriver_manager.chrome import ChromeDriverManager
+            
+            logger.info("正在初始化Selenium...")
             
             chrome_options = Options()
             if self.headless:
-                chrome_options.add_argument('--headless')
+                chrome_options.add_argument('--headless=new')
             
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-dev-shm-usage')
@@ -191,13 +192,35 @@ class XiaoHongShuCrawler:
             chrome_options.add_argument('--window-size=1920,1080')
             
             try:
-                # 尝试使用webdriver_manager自动下载和管理ChromeDriver
-                service = Service(ChromeDriverManager().install())
+                # 首先尝试使用预下载的ChromeDriver
+                webdriver_config_file = os.path.join(os.path.dirname(__file__), 'webdriver_path.txt')
+                if os.path.exists(webdriver_config_file):
+                    with open(webdriver_config_file, 'r') as f:
+                        driver_path = f.read().strip()
+                    logger.info(f"使用预下载的ChromeDriver: {driver_path}")
+                    
+                    if not os.path.exists(driver_path):
+                        raise FileNotFoundError(f"WebDriver文件不存在: {driver_path}")
+                else:
+                    # 如果没有预下载，尝试使用系统默认路径
+                    logger.warning("未找到预下载的ChromeDriver配置文件")
+                    logger.info("请先运行 python setup_webdriver.py 来配置驱动")
+                    raise FileNotFoundError("未找到WebDriver配置文件")
+                
+                service = Service(driver_path)
                 self.driver = webdriver.Chrome(service=service, options=chrome_options)
+                logger.info("Chrome浏览器已成功启动")
             except Exception as e:
-                logger.warning(f"无法使用webdriver_manager: {str(e)}，尝试直接初始化Chrome")
-                # 如果webdriver_manager不可用，尝试直接初始化
-                self.driver = webdriver.Chrome(options=chrome_options)
+                logger.warning(f"使用webdriver_manager下载ChromeDriver失败: {str(e)}")
+                logger.info("尝试使用系统默认ChromeDriver...")
+                
+                try:
+                    # 尝试使用系统默认的ChromeDriver
+                    self.driver = webdriver.Chrome(options=chrome_options)
+                    logger.info("使用系统默认ChromeDriver成功")
+                except Exception as e2:
+                    logger.error(f"使用系统默认ChromeDriver失败: {str(e2)}")
+                    raise RuntimeError(f"无法初始化ChromeDriver: {str(e2)}")
             
             # 修改navigator.webdriver属性
             self.driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
@@ -240,7 +263,9 @@ class XiaoHongShuCrawler:
             logger.info("Selenium初始化成功")
         except Exception as e:
             logger.error(f"Selenium初始化失败: {str(e)}")
-            self.use_selenium = False
+            import traceback
+            logger.error(traceback.format_exc())
+            raise RuntimeError(f"Selenium初始化失败: {str(e)}")
     
     def _get_headers(self):
         """获取请求头"""
@@ -319,16 +344,10 @@ class XiaoHongShuCrawler:
                 logger.info(f"从缓存加载到 {len(cached_data)} 条笔记")
                 return cached_data[:max_results]
         
-        logger.info(f"开始搜索关键词: {keyword}, use_selenium={self.use_selenium}")
-        if self.use_selenium:
-            logger.info("尝试使用Selenium搜索...")
-            notes = self._search_with_selenium(keyword, max_results)
-            if not notes:
-                logger.warning("Selenium搜索未找到结果，尝试使用Requests搜索")
-                notes = self._search_with_requests(keyword, max_results)
-        else:
-            logger.info("使用Requests搜索...")
-            notes = self._search_with_requests(keyword, max_results)
+        logger.info(f"开始搜索关键词: {keyword}")
+        
+        # 只使用Selenium搜索
+        notes = self._search_with_selenium(keyword, max_results)
         
         # 保存到缓存
         if notes:
