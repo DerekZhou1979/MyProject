@@ -1,0 +1,39 @@
+{
+    "qwen": {
+        "api_key": "sk-85c99df704084437a81632016427749c",
+        "model": "qwen-turbo",
+        "temperature": 0.7,
+        "max_tokens": 500,
+        "prompt_template": "请生成一篇适合小红书平台的内容，主题是：{topic}。内容应该包括标题、正文和5个合适的标签。"
+    },
+    "xiaohongshu": {
+        "cookie": "abRequestId=fee9057c-4c06-53e5-b9cd-debb51f56c94; a1=1930a3a92350nkf5z9axcz9nnf8vmxgwx0iun21og30000187876; webId=1541bff6e9ea74b7ea6867f4c97109c6; gid=yjq80q00yJC4yjq80q0jJ8Jyq28ITi2uj0CS3lkujIIiY7q8h6CkEI888yYWYWK80i44Yfyi; x-user-id-ark.xiaohongshu.com=64cf78b3000000000b005074; customerClientId=657033906634763; timestamp2=1731054141061cc5b3f1a19dc059d0edb11ae36a1c3585a7cc0041059f8af07; timestamp2.sig=f8A9roVs8UXX-TZ_IuUPb_O9hTqtEBUD6t2HveGscoM; x-user-id-school.xiaohongshu.com=64cf78b3000000000b005074; webBuild=4.62.3; xsecappid=xhs-pc-web; web_session=040069b5bb3bfb7e00222a79193a4bc4489818; unread={%22ub%22:%22682ad86d0000000022006eef%22%2C%22ue%22:%2268249e6300000000210054c9%22%2C%22uc%22:20}; websectiga=2a3d3ea002e7d92b5c9743590ebd24010cf3710ff3af8029153751e41a6af4a3; sec_poison_id=2b9cd67e-cd6b-4146-8476-42a410013919; loadts=1747815091277",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "auto_add_tags": true,
+        "default_tags": [
+            "AI创作",
+            "每日分享",
+            "生活记录"
+        ]
+    },
+    "content": {
+        "topics": [
+            "最新AI资讯",
+            "美食推荐",
+            "旅行攻略",
+            "读书笔记",
+            "职场技巧"
+        ],
+        "current_topic_index": 2,
+        "rotate_topics": true,
+        "add_disclaimer": true,
+        "disclaimer_text": "本内容由Derek AI辅助创作，仅供参考。"
+    },
+    "runtime": {
+        "log_level": "INFO",
+        "save_content": true,
+        "content_dir": "contents",
+        "max_retries": 1,
+        "retry_delay": 1
+    }
+}

@@ -1,0 +1,37 @@
+2025-05-21 16:59:32,969 - INFO - 日志记录已设置，级别: INFO, 文件: /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/logs/run_20250521_165932.log
+2025-05-21 16:59:32,969 - INFO - === Qwen-Max到小红书自动化脚本启动 ===
+2025-05-21 16:59:32,969 - INFO - Python版本: 3.12.4
+2025-05-21 16:59:34,039 - INFO - 配置已从 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/config.json 加载
+2025-05-21 16:59:34,039 - INFO - 日志记录已设置，级别: INFO, 文件: /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/logs/run_20250521_165934.log
+2025-05-21 16:59:34,039 - INFO - 开始生成内容，主题: 从配置中获取
+2025-05-21 16:59:34,040 - INFO - 配置已保存到 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/config.json
+2025-05-21 16:59:34,040 - INFO - 正在生成主题为 '美食推荐' 的内容 (尝试 1/1)
+2025-05-21 16:59:34,040 - INFO - API URL: https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation
+2025-05-21 16:59:34,040 - INFO - Request Headers: {'Authorization': 'Bearer sk-85c99df704084437a81632016427749c', 'Content-Type': 'application/json'}
+2025-05-21 16:59:34,040 - INFO - Request Data: {'model': 'qwen-turbo', 'input': {'messages': [{'role': 'user', 'content': '请生成一篇适合小红书平台的内容，主题是：美食推荐。内容应该包括标题、正文和5个合适的标签。'}]}, 'parameters': {'temperature': 0.7, 'max_tokens': 500}}
+2025-05-21 16:59:40,994 - INFO - 内容已保存到 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/contents/20250521_165940_美食推荐.json
+2025-05-21 16:59:40,994 - INFO - 内容生成成功: **标题：周末必打卡！这几家餐厅让你的味蕾嗨起来～**
+2025-05-21 16:59:40,994 - INFO - 内容生成-标签成功: ['#美食探店', '#周末打卡', '#吃货必看', '#美食分享', '#约会圣地**']
+2025-05-21 16:59:40,994 - INFO - 开始发布内容到小红书
+2025-05-21 16:59:40,994 - INFO - 准备发布内容: **标题：周末必打卡！这几家餐厅让你的味蕾嗨起来～**
+2025-05-21 16:59:40,994 - INFO - 正在发布内容 (尝试 1/1)
+2025-05-21 16:59:41,455 - INFO - ----浏览器已启动版本<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>
+2025-05-21 16:59:41,466 - INFO - ----浏览器已启动chromium
+2025-05-21 16:59:41,466 - INFO - ----浏览器已启动context<BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>>
+2025-05-21 16:59:41,467 - INFO - ----浏览器已启动chromium
+2025-05-21 16:59:43,714 - INFO - ----浏览器页面：https://creator.xiaohongshu.com/login?source=&redirectReason=401&lastUrl=%252Fpublish%252Fpublish%253Ffrom%253Dmenu
+2025-05-21 16:59:43,714 - INFO - ----浏览器页面：<Page url='https://creator.xiaohongshu.com/login?source=&redirectReason=401&lastUrl=%252Fpublish%252Fpublish%253Ffrom%253Dmenu'>
+2025-05-21 16:59:43,714 - INFO - ----浏览器页面：<BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>>
+2025-05-21 16:59:43,714 - INFO - ----浏览器页面：<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>
+2025-05-21 16:59:43,714 - INFO - ----浏览器页面：<xiaohongshu.XiaohongshuPublisher object at 0x1108472f0>
+2025-05-21 16:59:43,714 - INFO - ----浏览器页面：{'title': '**标题：周末必打卡！这几家餐厅让你的味蕾嗨起来～**', 'content': '\n**正文：**\n姐妹们，最近发现了几家超棒的餐厅，真的忍不住要来跟大家分享！无论是朋友聚餐还是情侣约会，这些地方都能满足你的需求哦～\n\n1️⃣ **日料店：鱼生の味**\n这家日料店简直是刺身爱好者的天堂！新鲜的三文鱼、金枪鱼，每一口都能感受到海洋的味道。而且他们的寿司摆盘精致到不忍下筷，拍照发朋友圈绝对吸睛！\n\n2️⃣ **火锅店：辣翻天**\n如果你是重口味爱好者，这家火锅店一定不能错过！锅底麻辣鲜香，涮菜种类丰富，特别是他们家的手工虾滑，Q弹十足，超级过瘾！\n\n3️⃣ **甜品店：甜蜜时光**\n想要一份治愈系甜点？这家甜品店就是你的不二之选！招牌榴莲千层蛋糕，入口即化，浓郁的榴莲香气让人欲罢不能。还有各种水果塔，颜值超高，拍照发圈分分钟点赞爆棚！\n\n4️⃣ **西餐厅：浪漫法式风情**\n喜欢西餐的朋友一定要试试这家！牛排煎得恰到好处，外焦里嫩，搭配上一杯红酒，整个氛围都变得浪漫起来。还有那道焦糖布丁，甜而不腻，吃完还想再来一份！\n\n5️⃣ **烧烤摊：深夜食堂**\n最后一定要推荐这家街边烧烤摊，虽然环境简单，但味道绝不含糊！烤串外酥里嫩，撒上特制调料，简直绝了！晚上和朋友们一起去撸串聊天，幸福感爆棚！\n\n📍地址：具体位置可以搜一下大众点评哦～\n\n**标签：#美食探店 #周末打卡 #吃货必看 #美食分享 #约会圣地**\n\n本内容由Derek AI辅助创作，仅供参考。', 'tags': ['#美食探店', '#周末打卡', '#吃货必看', '#美食分享', '#约会圣地**'], 'topic': '美食推荐', 'timestamp': '2025-05-21 16:59:40'}
+2025-05-21 16:59:43,715 - INFO - ----浏览器页面：abRequestId=fee9057c-4c06-53e5-b9cd-debb51f56c94; a1=1930a3a92350nkf5z9axcz9nnf8vmxgwx0iun21og30000187876; webId=1541bff6e9ea74b7ea6867f4c97109c6; gid=yjq80q00yJC4yjq80q0jJ8Jyq28ITi2uj0CS3lkujIIiY7q8h6CkEI888yYWYWK80i44Yfyi; x-user-id-ark.xiaohongshu.com=64cf78b3000000000b005074; customerClientId=657033906634763; timestamp2=1731054141061cc5b3f1a19dc059d0edb11ae36a1c3585a7cc0041059f8af07; timestamp2.sig=f8A9roVs8UXX-TZ_IuUPb_O9hTqtEBUD6t2HveGscoM; x-user-id-school.xiaohongshu.com=64cf78b3000000000b005074; webBuild=4.62.3; xsecappid=xhs-pc-web; web_session=040069b5bb3bfb7e00222a79193a4bc4489818; unread={%22ub%22:%22682ad86d0000000022006eef%22%2C%22ue%22:%2268249e6300000000210054c9%22%2C%22uc%22:20}; websectiga=2a3d3ea002e7d92b5c9743590ebd24010cf3710ff3af8029153751e41a6af4a3; sec_poison_id=2b9cd67e-cd6b-4146-8476-42a410013919; loadts=1747815091277
+2025-05-21 17:00:13,773 - ERROR - 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+
+2025-05-21 17:00:13,774 - ERROR - 已达到最大重试次数，放弃发布内容
+2025-05-21 17:00:13,774 - ERROR - 内容发布失败: 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+

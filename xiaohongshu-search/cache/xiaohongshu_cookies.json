@@ -1,0 +1,92 @@
+[
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1748583667569,
+    "httpOnly": false,
+    "name": "loadts",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1748582716056"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1748841851,
+    "httpOnly": false,
+    "name": "websectiga",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "984412fef754c018e472127b8effd174be8a5d51061c991aadd200c69a2801d6"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1783142718,
+    "httpOnly": false,
+    "name": "gid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "yjWyiD4Yji1JyjWyiD4WdThi8fDk609KTdkvjFVjKidEkKq8S91yli888WJJj4q8jWdJj0YS"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1780118650,
+    "httpOnly": false,
+    "name": "a1",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1971fb47e0dbgmat6kegy96fewgctl1olk96fvfrj30000722943"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1780118716,
+    "httpOnly": false,
+    "name": "xsecappid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "xhs-pc-web"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1748583255,
+    "httpOnly": false,
+    "name": "sec_poison_id",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "43bfc2b4-6d25-43b0-96c2-0c024836b0ee"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1780118648,
+    "httpOnly": false,
+    "name": "abRequestId",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "ebc780dc-4ce3-509e-ad9e-2f8da583b538"
+  },
+  {
+    "domain": ".xiaohongshu.com",
+    "expiry": 1780118650,
+    "httpOnly": false,
+    "name": "webId",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "15e96804fd5203da4484f671ebc3b992"
+  },
+  {
+    "domain": "www.xiaohongshu.com",
+    "expiry": 1748584448,
+    "httpOnly": true,
+    "name": "acw_tc",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "0a00d8df17485836111066020e622a43e62b6bb22806207269994aaabf5139"
+  }
+]

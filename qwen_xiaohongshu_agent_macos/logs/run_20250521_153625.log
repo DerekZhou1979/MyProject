@@ -1,0 +1,37 @@
+2025-05-21 15:36:25,203 - INFO - 日志记录已设置，级别: INFO, 文件: /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/logs/run_20250521_153625.log
+2025-05-21 15:36:25,203 - INFO - === Qwen-Max到小红书自动化脚本启动 ===
+2025-05-21 15:36:25,203 - INFO - Python版本: 3.12.4
+2025-05-21 15:36:26,316 - INFO - 配置已从 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/config.json 加载
+2025-05-21 15:36:26,316 - INFO - 日志记录已设置，级别: INFO, 文件: /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/logs/run_20250521_153626.log
+2025-05-21 15:36:26,316 - INFO - 开始生成内容，主题: 从配置中获取
+2025-05-21 15:36:26,317 - INFO - 配置已保存到 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/config.json
+2025-05-21 15:36:26,317 - INFO - 正在生成主题为 '最新AI资讯' 的内容 (尝试 1/3)
+2025-05-21 15:36:26,317 - INFO - API URL: https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation
+2025-05-21 15:36:26,317 - INFO - Request Headers: {'Authorization': 'Bearer sk-85c99df704084437a81632016427749c', 'Content-Type': 'application/json'}
+2025-05-21 15:36:26,317 - INFO - Request Data: {'model': 'qwen-max', 'input': {'messages': [{'role': 'user', 'content': '请生成一篇适合小红书平台的内容，主题是：最新AI资讯。内容应该包括标题、正文和5个合适的标签。'}]}, 'parameters': {'temperature': 0.7, 'max_tokens': 2000}}
+2025-05-21 15:36:58,415 - INFO - 内容已保存到 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/contents/20250521_153658_最新AI资讯.json
+2025-05-21 15:36:58,415 - INFO - 内容生成成功: 标题：🚀【AI新纪元】颠覆想象的五大最新科技趋势，你get了吗？💡
+2025-05-21 15:36:58,415 - INFO - 开始发布内容到小红书
+2025-05-21 15:36:58,415 - INFO - 准备发布内容: 标题：🚀【AI新纪元】颠覆想象的五大最新科技趋势，你get了吗？💡
+2025-05-21 15:36:58,415 - INFO - 正在发布内容 (尝试 1/3)
+2025-05-21 15:37:31,485 - ERROR - 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+
+2025-05-21 15:37:31,486 - INFO - 将在 5 秒后重试...
+2025-05-21 15:37:36,486 - INFO - 正在发布内容 (尝试 2/3)
+2025-05-21 15:38:08,868 - ERROR - 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+
+2025-05-21 15:38:08,868 - INFO - 将在 5 秒后重试...
+2025-05-21 15:38:13,871 - INFO - 正在发布内容 (尝试 3/3)
+2025-05-21 15:38:46,340 - ERROR - 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+
+2025-05-21 15:38:46,340 - ERROR - 已达到最大重试次数，放弃发布内容
+2025-05-21 15:38:46,340 - ERROR - 内容发布失败: 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+

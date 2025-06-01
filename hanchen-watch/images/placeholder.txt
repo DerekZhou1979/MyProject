@@ -1,0 +1,35 @@
+# 图片占位说明
+
+此目录需要添加以下图片文件：
+
+## 首页图片
+1. hero-bg.jpg - 首页英雄区背景图
+2. icon-craft.png - 工艺图标
+3. icon-design.png - 设计图标
+4. icon-quality.png - 品质图标
+5. watch-shanhe.jpg - 山河系列腕表图
+6. watch-yuangu.jpg - 非遗系列腕表图
+7. watch-mingzhu.jpg - 飞行系列腕表图
+8. watch-tianxiang.jpg - 大师系列腕表图
+9. brand-heritage.jpg - 品牌历史图
+10. craft-movement.jpg - 机芯工艺图
+11. craft-enamel.jpg - 传统工艺图
+12. news-1.jpg - 新闻图片1 (戛纳电影节)
+13. news-2.jpg - 新闻图片2 (品牌日活动)
+14. news-3.jpg - 新闻图片3 (龙首磬音腕表发布)
+15. store-map.jpg - 门店地图
+
+## 产品详情页图片
+16. watch-longshoulongyin.jpg - 龙首磬音腕表英雄区背景图
+17. product-main.jpg - 龙首磬音腕表主图
+18. product-thumb-1.jpg - 龙首磬音腕表缩略图1
+19. product-thumb-2.jpg - 龙首磬音腕表缩略图2
+20. product-thumb-3.jpg - 龙首磬音腕表缩略图3
+21. product-thumb-4.jpg - 龙首磬音腕表缩略图4
+22. related-1.jpg - 三足金乌三问报时金雕动偶腕表图
+23. related-2.jpg - 斗转星移中华年历陀飞轮图
+24. related-3.jpg - 九龙图金雕双陀飞轮图
+25. related-4.jpg - 曜翼立体陀飞轮图
+
+请使用高质量的产品图片替换这些占位图，以确保网站呈现最佳效果。
+建议从海鸥表官网获取相关图片资源，并进行适当的处理和优化。 

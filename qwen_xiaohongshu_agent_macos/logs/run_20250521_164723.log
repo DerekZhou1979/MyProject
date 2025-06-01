@@ -1,0 +1,41 @@
+2025-05-21 16:47:23,074 - INFO - 日志记录已设置，级别: INFO, 文件: /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/logs/run_20250521_164723.log
+2025-05-21 16:47:23,074 - INFO - === Qwen-Max到小红书自动化脚本启动 ===
+2025-05-21 16:47:23,074 - INFO - Python版本: 3.12.4
+2025-05-21 16:47:24,158 - INFO - 配置已从 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/config.json 加载
+2025-05-21 16:47:24,158 - INFO - 日志记录已设置，级别: INFO, 文件: /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/logs/run_20250521_164724.log
+2025-05-21 16:47:24,159 - INFO - 开始生成内容，主题: 从配置中获取
+2025-05-21 16:47:24,159 - INFO - 配置已保存到 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/config.json
+2025-05-21 16:47:24,159 - INFO - 正在生成主题为 '最新AI资讯' 的内容 (尝试 1/1)
+2025-05-21 16:47:24,159 - INFO - API URL: https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation
+2025-05-21 16:47:24,159 - INFO - Request Headers: {'Authorization': 'Bearer sk-85c99df704084437a81632016427749c', 'Content-Type': 'application/json'}
+2025-05-21 16:47:24,159 - INFO - Request Data: {'model': 'qwen-turbo', 'input': {'messages': [{'role': 'user', 'content': '请生成一篇适合小红书平台的内容，主题是：最新AI资讯。内容应该包括标题、正文和5个合适的标签。'}]}, 'parameters': {'temperature': 0.7, 'max_tokens': 500}}
+2025-05-21 16:47:32,180 - INFO - 内容已保存到 /Users/derek/Downloads/qwen_xiaohongshu_agent_macos/contents/20250521_164732_最新AI资讯.json
+2025-05-21 16:47:32,180 - INFO - 内容生成成功: **标题：🔥2023年不可错过的最新AI资讯大放送！**
+2025-05-21 16:47:32,180 - INFO - 内容生成-标签成功: ['小红书科技博主推荐']
+2025-05-21 16:47:32,180 - INFO - 开始发布内容到小红书
+2025-05-21 16:47:32,180 - INFO - 准备发布内容: **标题：🔥2023年不可错过的最新AI资讯大放送！**
+2025-05-21 16:47:32,180 - INFO - 正在发布内容 (尝试 1/1)
+2025-05-21 16:47:32,644 - INFO - ----浏览器已启动版本<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>
+2025-05-21 16:47:32,656 - INFO - ----浏览器已启动chromium
+2025-05-21 16:47:32,656 - INFO - ----浏览器已启动context<BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>>
+2025-05-21 16:47:32,656 - INFO - ----浏览器已启动chromium
+2025-05-21 16:47:35,133 - INFO - ----浏览器页面：https://creator.xiaohongshu.com/login?source=official&redirectReason=401&lastUrl=%252Fpublish%252Fpublish%253Fsource%253Dofficial
+2025-05-21 16:47:35,133 - INFO - ----浏览器页面：<Page url='https://creator.xiaohongshu.com/login?source=official&redirectReason=401&lastUrl=%252Fpublish%252Fpublish%253Fsource%253Dofficial'>
+2025-05-21 16:47:35,133 - INFO - ----浏览器页面：<BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>>
+2025-05-21 16:47:35,133 - INFO - ----浏览器页面：<Browser type=<BrowserType name=chromium executable_path=/Users/derek/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium> version=136.0.7103.25>
+2025-05-21 16:47:35,133 - INFO - ----浏览器页面：<xiaohongshu.XiaohongshuPublisher object at 0x10d93c2f0>
+2025-05-21 16:47:35,134 - INFO - ----浏览器页面：{'title': '**标题：🔥2023年不可错过的最新AI资讯大放送！**', 'content': '\nHello小伙伴们～今天来给大家分享一波最新的AI资讯，这些可都是科技圈的重磅消息哦！快来看看有没有你感兴趣的～\n\n**1️⃣ AI绘画再升级**\n最近AI绘画技术又有了新突破，不仅能生成超逼真的风景画，还能根据你的描述生成独特的艺术作品。无论是插画师还是设计师，都能从中找到灵感！\n\n**2️⃣ 语音助手更智能**\n各大品牌都在升级自己的语音助手，不仅识别率更高，还能进行多轮对话，甚至能理解复杂指令。未来我们的生活会越来越方便啦！\n\n**3️⃣ AI医疗助手上线**\nAI在医疗领域的应用也越来越广泛，不仅可以帮助医生快速诊断疾病，还能提供个性化的健康建议。科技改变生活，这句话果然没错！\n\n**4️⃣ 虚拟人技术火热发展**\n虚拟人不再是冷冰冰的程序，而是越来越有“温度”。很多企业已经开始用虚拟人做客服、主播等角色，互动感十足！\n\n**5️⃣ AI教育工具崛起**\n在线教育平台纷纷引入AI技术，可以根据学生的学习情况定制专属课程，真正做到因材施教。学习效率up up！\n\n**标签：#科技前沿 #人工智能 #AI资讯 #未来科技 #数字生活**\n\n希望这些资讯能让你对AI有更多了解，也欢迎在评论区分享你对AI的看法哦！咱们一起探讨未来的可能性～🌟\n\n\n本内容由Derek AI辅助创作，仅供参考。', 'tags': ['小红书科技博主推荐'], 'topic': '最新AI资讯', 'timestamp': '2025-05-21 16:47:32'}
+2025-05-21 16:47:35,134 - INFO - ----浏览器页面：abRequestId=fee9057c-4c06-53e5-b9cd-debb51f56c94; a1=1930a3a92350nkf5z9axcz9nnf8vmxgwx0iun21og30000187876; webId=1541bff6e9ea74b7ea6867f4c97109c6; gid=yjq80q00yJC4yjq80q0jJ8Jyq28ITi2uj0CS3lkujIIiY7q8h6CkEI888yYWYWK80i44Yfyi; x-user-id-ark.xiaohongshu.com=64cf78b3000000000b005074; customerClientId=657033906634763; timestamp2=1731054141061cc5b3f1a19dc059d0edb11ae36a1c3585a7cc0041059f8af07; timestamp2.sig=f8A9roVs8UXX-TZ_IuUPb_O9hTqtEBUD6t2HveGscoM; x-user-id-school.xiaohongshu.com=64cf78b3000000000b005074; webBuild=4.62.3; xsecappid=xhs-pc-web; web_session=040069b5bb3bfb7e00222a79193a4bc4489818; unread={%22ub%22:%22682ad86d0000000022006eef%22%2C%22ue%22:%2268249e6300000000210054c9%22%2C%22uc%22:20}; websectiga=2a3d3ea002e7d92b5c9743590ebd24010cf3710ff3af8029153751e41a6af4a3; sec_poison_id=2b9cd67e-cd6b-4146-8476-42a410013919; loadts=1747815091277
+2025-05-21 16:48:05,194 - ERROR - 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+    - waiting for" https://creator.xiaohongshu.com/publish/publish?source=official" navigation to finish...
+    - navigated to "https://creator.xiaohongshu.com/publish/publish?source=official"
+
+2025-05-21 16:48:05,194 - ERROR - 已达到最大重试次数，放弃发布内容
+2025-05-21 16:48:05,194 - ERROR - 内容发布失败: 发布内容失败: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("textarea, div[contenteditable=true]") to be visible
+    - waiting for" https://creator.xiaohongshu.com/publish/publish?source=official" navigation to finish...
+    - navigated to "https://creator.xiaohongshu.com/publish/publish?source=official"
+
