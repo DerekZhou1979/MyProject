@@ -85,7 +85,15 @@ def search():
         use_cache = request.args.get('use_cache', 'true').lower() == 'true'
         
         # 执行搜索
-        notes = crawler.search(keyword, max_results=max_results, use_cache=use_cache)
+        search_results = crawler.search(keyword, max_results=max_results, use_cache=use_cache)
+        
+        # 确保返回的数据格式正确
+        # 如果search_results是一个字典并且包含data字段，提取data字段
+        if isinstance(search_results, dict) and 'data' in search_results:
+            notes = search_results['data']
+        else:
+            # 否则直接使用搜索结果作为notes
+            notes = search_results if isinstance(search_results, list) else []
         
         return jsonify({
             "keyword": keyword,
