@@ -1,1 +1,1 @@
-/Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/drivers/chromedriver-mac-arm64/chromedriver
+/Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search-runtime/drivers/chromedriver-mac-arm64/chromedriver
