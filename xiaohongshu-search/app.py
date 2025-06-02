@@ -1,190 +1,267 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, request, jsonify, send_from_directory, redirect, url_for
-from flask_cors import CORS
-import logging
-import os
-import time
-from crawler import XiaoHongShuCrawler
-import traceback
+"""
+小红书搜索工具 - 整合启动文件
+确保所有依赖服务在localhost访问前完成初始化，使用本地ChromeDriver
+"""
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+import sys
+import os
+import logging
+import time
+import threading
+import shutil
+from flask import Flask
+
+# 添加项目根目录到Python路径
+sys.path.append(os.path.dirname(__file__))
+
+# 导入全局配置
+from config.config import (
+    APP_CONFIG, SEARCH_CONFIG, CRAWLER_CONFIG, 
+    DIRECTORIES, FILE_PATHS, LOGGING_CONFIG,
+    create_directories, validate_config
+)
+
+# 创建必要的目录
+create_directories()
+
+# 配置日志 - 使用全局配置
+logging.basicConfig(
+    level=getattr(logging, LOGGING_CONFIG['LEVEL']), 
+    format=LOGGING_CONFIG['FORMAT'],
+    handlers=[
+        logging.FileHandler(FILE_PATHS['STARTUP_LOG'], encoding=LOGGING_CONFIG['ENCODING']),
+        logging.StreamHandler()
+    ]
+)
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__, static_folder='.')
-CORS(app)  # 允许跨域请求
-
-# 配置文件路径
-COOKIES_FILE = os.path.join('cache', 'xiaohongshu_cookies.json')
-
-# 初始化爬虫
-# 只使用Selenium模式
-crawler = None  # 暂时设为None，延迟初始化
-
-def init_crawler():
-    """延迟初始化爬虫"""
-    global crawler
-    if crawler is None:
-        try:
-            logger.info("正在初始化爬虫...")
-            crawler = XiaoHongShuCrawler(use_selenium=True, headless=True, cookies_file=COOKIES_FILE)
-            logger.info("爬虫初始化成功，使用Selenium模式")
+def cleanup_cache():
+    """清理缓存目录中的过期文件，保留cookies目录"""
+    logger.info("正在清理缓存过期文件...")
+    
+    try:
+        cache_dir = DIRECTORIES['CACHE_DIR']
+        
+        if not os.path.exists(cache_dir):
+            logger.info("缓存目录不存在，无需清理")
             return True
-        except Exception as e:
-            logger.error(f"爬虫初始化失败: {str(e)}")
-            logger.error(traceback.format_exc())
-            crawler = None
-            return False
+        
+        # 保护的目录列表（不删除）
+        protected_dirs = ['cookies']
+        
+        # 统计清理的文件和目录数量
+        cleaned_files = 0
+        cleaned_dirs = 0
+        
+        # 遍历cache目录中的所有项目
+        for item in os.listdir(cache_dir):
+            item_path = os.path.join(cache_dir, item)
+            
+            # 跳过受保护的目录
+            if item in protected_dirs:
+                logger.info(f"保留受保护的目录: {item}")
+                continue
+            
+            try:
+                if os.path.isfile(item_path):
+                    # 删除文件
+                    os.remove(item_path)
+                    cleaned_files += 1
+                    logger.debug(f"删除文件: {item}")
+                elif os.path.isdir(item_path):
+                    # 删除目录及其内容
+                    shutil.rmtree(item_path)
+                    cleaned_dirs += 1
+                    logger.debug(f"删除目录: {item}")
+                    
+            except Exception as e:
+                logger.warning(f"删除 {item} 时出错: {str(e)}")
+                continue
+        
+        logger.info(f"✓ 缓存清理完成: 删除了 {cleaned_files} 个文件, {cleaned_dirs} 个目录")
+        
+        # 重新创建必要的目录
+        essential_dirs = ['temp', 'logs']
+        for dir_name in essential_dirs:
+            dir_path = os.path.join(cache_dir, dir_name)
+            os.makedirs(dir_path, exist_ok=True)
+        
+        logger.info("✓ 重新创建必要的缓存目录")
+        return True
+        
+    except Exception as e:
+        logger.error(f"清理缓存时出错: {str(e)}")
+        return False
+
+def check_dependencies():
+    """检查和安装所有依赖"""
+    logger.info("正在检查系统依赖...")
+    
+    try:
+        # 检查基础Python包
+        import selenium
+        import flask
+        import flask_cors
+        import requests
+        import bs4
+        logger.info("✓ 基础Python包检查完成")
+    except ImportError as e:
+        logger.error(f"缺少必要的Python包: {e}")
+        logger.info("正在安装缺失的依赖...")
+        os.system("python3 -m pip install -r requirements.txt")
+        return False
+    
+    # 检查Chrome和chromedriver
+    try:
+        chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        if not os.path.exists(chrome_path):
+            logger.warning("未找到Chrome浏览器，请确保已安装Google Chrome")
+        else:
+            logger.info("✓ Chrome浏览器检查完成")
+    except Exception as e:
+        logger.error(f"Chrome检查失败: {e}")
+        return False
+    
     return True
 
-@app.route('/')
-def index():
-    """提供静态文件服务"""
-    return send_from_directory('.', 'index.html')
-
-@app.route('/login')
-def login():
-    """登录页面"""
-    # 不使用无头模式，打开浏览器进行登录
-    try:
-        # 创建一个新的爬虫实例，专门用于登录
-        login_crawler = XiaoHongShuCrawler(use_selenium=True, headless=False)
-        success = login_crawler.login()
-        if success:
-            # 登录成功后，需要重新初始化主爬虫
-            global crawler
-            crawler = XiaoHongShuCrawler(use_selenium=True, headless=True, cookies_file=COOKIES_FILE)
-            return redirect(url_for('index'))
-        else:
-            return jsonify({"error": "登录失败，请重试"}), 500
-    except Exception as e:
-        logger.error(f"登录过程出错: {str(e)}")
-        logger.error(traceback.format_exc())
-        return jsonify({"error": f"登录过程出错: {str(e)}"}), 500
-
-@app.route('/api/search')
-def search():
-    """搜索API"""
-    # 延迟初始化爬虫
-    if not init_crawler():
-        return jsonify({"error": "爬虫初始化失败，请检查网络连接和Chrome浏览器"}), 500
-        
-    keyword = request.args.get('keyword', '')
-    if not keyword:
-        return jsonify({"error": "缺少关键词参数"}), 400
+def initialize_webdriver():
+    """初始化WebDriver - 使用全局配置"""
+    logger.info("正在初始化WebDriver...")
     
     try:
-        # 获取最大结果数量参数，默认为10
-        max_results = int(request.args.get('max_results', 10))
-        # 是否使用缓存，默认为True
-        use_cache = request.args.get('use_cache', 'true').lower() == 'true'
+        from selenium.webdriver.chrome.service import Service
+        from selenium import webdriver
+        from selenium.webdriver.chrome.options import Options
         
-        # 使用爬虫搜索
-        notes = crawler.search(keyword, max_results=max_results, use_cache=use_cache)
+        # 配置Chrome选项 - 使用全局配置
+        chrome_options = Options()
+        for option in CRAWLER_CONFIG['CHROME_OPTIONS']:
+            chrome_options.add_argument(option)
         
-        return jsonify({
-            "keyword": keyword,
-            "timestamp": int(time.time()),
-            "count": len(notes),
-            "notes": notes
-        })
+        # 使用本地chromedriver
+        local_driver_path = FILE_PATHS['CHROMEDRIVER_PATH']
+        
+        if os.path.exists(local_driver_path):
+            logger.info(f"找到本地chromedriver: {local_driver_path}")
+            
+            # 设置文件权限
+            os.chmod(local_driver_path, 0o755)
+            
+            # 验证本地chromedriver
+            service = Service(local_driver_path)
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+            driver.get("data:text/html,<html><body><h1>WebDriver Validation</h1></body></html>")
+            driver.quit()
+            
+            logger.info("✓ 本地chromedriver验证成功")
+            return True
+        else:
+            logger.error("本地chromedriver不存在")
+            logger.info("请确保drivers/chromedriver-mac-arm64/chromedriver文件存在")
+            return False
+                
     except Exception as e:
-        logger.error(f"搜索出错: {str(e)}")
-        logger.error(traceback.format_exc())
-        return jsonify({"error": "搜索失败", "message": str(e)}), 500
+        logger.error(f"WebDriver初始化失败: {e}")
+        return False
 
-@app.route('/api/note/<note_id>')
-def get_note(note_id):
-    """获取笔记详情API"""
-    # 检查爬虫是否初始化成功
-    if not crawler:
-        return jsonify({"error": "爬虫未初始化，请先登录"}), 500
-        
-    if not note_id:
-        return jsonify({"error": "缺少笔记ID参数"}), 400
+def initialize_crawler():
+    """预初始化爬虫组件"""
+    logger.info("正在预初始化爬虫组件...")
     
     try:
-        # 使用爬虫获取笔记详情
-        note = crawler.get_note_detail(note_id)
+        from src.crawler.xiaohongshu_crawler import XiaoHongShuCrawler
         
-        if note:
-            return jsonify({"note": note})
+        # 创建配置目录 - 使用全局配置
+        for dir_path in DIRECTORIES.values():
+            os.makedirs(dir_path, exist_ok=True)
+        
+        logger.info("✓ 爬虫组件预初始化完成")
+        return True
+        
+    except Exception as e:
+        logger.error(f"爬虫组件预初始化失败: {e}")
+        return False
+
+def start_flask_app():
+    """启动Flask应用"""
+    logger.info("正在启动Flask应用...")
+    
+    try:
+        from src.server.main_server import app
+        
+        # 创建静态文件目录
+        os.makedirs(os.path.join(DIRECTORIES['STATIC_DIR'], 'css'), exist_ok=True)
+        os.makedirs(os.path.join(DIRECTORIES['STATIC_DIR'], 'js'), exist_ok=True)
+        os.makedirs(os.path.join(DIRECTORIES['STATIC_DIR'], 'images'), exist_ok=True)
+        
+        logger.info("所有服务初始化完成！")
+        logger.info("=" * 50)
+        logger.info("小红书搜索服务已就绪")
+        logger.info(f"访问地址: http://{APP_CONFIG['HOST']}:{APP_CONFIG['PORT']}")
+        logger.info(f"如需登录，请访问: http://{APP_CONFIG['HOST']}:{APP_CONFIG['PORT']}/login")
+        logger.info(f"默认搜索结果数量: {SEARCH_CONFIG['DEFAULT_MAX_RESULTS']} 篇笔记")
+        logger.info("=" * 50)
+        
+        # 启动Flask应用 - 使用全局配置
+        app.run(debug=APP_CONFIG['DEBUG'], host=APP_CONFIG['HOST'], port=APP_CONFIG['PORT'])
+        
+    except Exception as e:
+        logger.error(f"Flask应用启动失败: {e}")
+        raise
+
+def main():
+    """主启动函数"""
+    start_time = time.time()
+    logger.info("开始启动小红书搜索服务...")
+    
+    try:
+        # 步骤0: 验证配置
+        config_errors = validate_config()
+        if config_errors:
+            logger.warning("配置验证发现问题:")
+            for error in config_errors:
+                logger.warning(f"  - {error}")
         else:
-            return jsonify({"error": "未找到该笔记"}), 404
-    except Exception as e:
-        logger.error(f"获取笔记详情出错: {str(e)}")
-        logger.error(traceback.format_exc())
-        return jsonify({"error": "获取笔记详情失败", "message": str(e)}), 500
-
-@app.route('/api/hot-keywords')
-def hot_keywords():
-    """获取热门关键词API"""
-    # 检查爬虫是否初始化成功
-    if not crawler:
-        return jsonify({"error": "爬虫未初始化，请先登录"}), 500
+            logger.info("✓ 配置验证通过")
         
-    try:
-        # 使用爬虫获取热门关键词
-        keywords = crawler.get_hot_keywords()
-        return jsonify({"keywords": keywords})
-    except Exception as e:
-        logger.error(f"获取热门关键词出错: {str(e)}")
-        logger.error(traceback.format_exc())
-        return jsonify({"error": "获取热门关键词失败", "message": str(e)}), 500
-
-@app.route('/css/<path:path>')
-def serve_css(path):
-    """提供CSS文件服务"""
-    return send_from_directory('css', path)
-
-@app.route('/js/<path:path>')
-def serve_js(path):
-    """提供JavaScript文件服务"""
-    return send_from_directory('js', path)
-
-@app.route('/img/<path:path>')
-def serve_img(path):
-    """提供图片文件服务"""
-    return send_from_directory('img', path)
-
-@app.errorhandler(404)
-def not_found(e):
-    """处理404错误"""
-    return jsonify({"error": "资源不存在"}), 404
-
-@app.errorhandler(500)
-def server_error(e):
-    """处理500错误"""
-    return jsonify({"error": "服务器内部错误"}), 500
-
-def cleanup():
-    """清理资源"""
-    if crawler:
-        crawler.close()
-
-# 应用终止时清理资源
-import atexit
-atexit.register(cleanup)
-
-if __name__ == '__main__':
-    try:
-        # 创建必要的目录
-        os.makedirs('cache', exist_ok=True)
-        os.makedirs('img', exist_ok=True)
+        # 步骤1: 清理缓存过期文件
+        if not cleanup_cache():
+            logger.warning("缓存清理失败，但继续启动...")
         
-        # 检查爬虫是否初始化成功
-        if not crawler:
-            logger.warning("爬虫未初始化，某些功能可能不可用")
-            logger.warning("请先运行登录流程: http://localhost:8080/login")
+        # 步骤2: 检查依赖
+        if not check_dependencies():
+            logger.error("依赖检查失败，请手动安装所需依赖")
+            return False
         
-        # 启动服务
-        app.run(debug=False, host='0.0.0.0', port=8080)
+        # 步骤3: 初始化WebDriver（使用本地chromedriver）
+        if not initialize_webdriver():
+            logger.error("WebDriver初始化失败，请检查本地chromedriver")
+            return False
+        
+        # 步骤4: 预初始化爬虫组件
+        if not initialize_crawler():
+            logger.error("爬虫组件预初始化失败")
+            return False
+        
+        # 步骤5: 启动Flask应用
+        elapsed_time = time.time() - start_time
+        logger.info(f"所有初始化步骤完成，用时: {elapsed_time:.2f}秒")
+        
+        start_flask_app()
+        
     except KeyboardInterrupt:
         logger.info("服务已停止")
-        cleanup()
     except Exception as e:
-        logger.error(f"服务启动失败: {str(e)}")
+        logger.error(f"启动失败: {e}")
+        import traceback
         logger.error(traceback.format_exc())
-        cleanup() 
+        return False
+    
+    return True
+
+if __name__ == '__main__':
+    success = main()
+    sys.exit(0 if success else 1) 
