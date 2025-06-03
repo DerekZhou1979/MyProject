@@ -207,7 +207,6 @@ header {
     height: 45px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -218,7 +217,6 @@ header {
     height: 60px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
