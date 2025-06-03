@@ -1,0 +1,430 @@
+2025-06-03 22:24:09,351 - __main__ - INFO - 开始启动小红书搜索服务...
+2025-06-03 22:24:09,354 - __main__ - INFO - ✓ 配置验证通过
+2025-06-03 22:24:09,354 - __main__ - INFO - 正在清理缓存过期文件...
+2025-06-03 22:24:09,367 - __main__ - INFO - 保留最新日志文件: startup.log
+2025-06-03 22:24:09,367 - __main__ - INFO - logs目录清理完成，删除了 0 个旧日志文件
+2025-06-03 22:24:09,367 - __main__ - INFO - 保留受保护的目录: cookies
+2025-06-03 22:24:09,367 - __main__ - INFO - ✓ 缓存清理完成: 删除了 0 个文件, 2 个目录
+2025-06-03 22:24:09,368 - __main__ - INFO - ✓ 重新创建必要的缓存目录
+2025-06-03 22:24:09,368 - __main__ - INFO - 正在检查系统依赖...
+2025-06-03 22:24:10,013 - __main__ - INFO - ✓ 基础Python包检查完成
+2025-06-03 22:24:10,014 - __main__ - INFO - ✓ Chrome浏览器检查完成
+2025-06-03 22:24:10,014 - __main__ - INFO - 正在初始化WebDriver...
+2025-06-03 22:24:10,087 - __main__ - INFO - 找到本地chromedriver: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/drivers/chromedriver-mac-arm64/chromedriver
+2025-06-03 22:24:10,891 - __main__ - INFO - ✓ 本地chromedriver验证成功
+2025-06-03 22:24:10,892 - __main__ - INFO - 正在预初始化爬虫组件...
+2025-06-03 22:24:10,895 - __main__ - INFO - ✓ 爬虫组件预初始化完成
+2025-06-03 22:24:10,895 - __main__ - INFO - 所有初始化步骤完成，用时: 1.54秒
+2025-06-03 22:24:10,895 - __main__ - INFO - 正在启动Flask应用...
+2025-06-03 22:24:10,901 - __main__ - INFO - 所有服务初始化完成！
+2025-06-03 22:24:10,901 - __main__ - INFO - ==================================================
+2025-06-03 22:24:10,901 - __main__ - INFO - 小红书搜索服务已就绪
+2025-06-03 22:24:10,902 - __main__ - INFO - 访问地址: http://0.0.0.0:8080
+2025-06-03 22:24:10,902 - __main__ - INFO - 如需登录，请访问: http://0.0.0.0:8080/login
+2025-06-03 22:24:10,902 - __main__ - INFO - 默认搜索结果数量: 30 篇笔记
+2025-06-03 22:24:10,902 - __main__ - INFO - ==================================================
+2025-06-03 22:24:10,909 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://26.26.26.1:8080
+2025-06-03 22:24:10,909 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 22:24:20,730 - __main__ - INFO - 开始启动小红书搜索服务...
+2025-06-03 22:24:20,730 - __main__ - INFO - ✓ 配置验证通过
+2025-06-03 22:24:20,730 - __main__ - INFO - 正在清理缓存过期文件...
+2025-06-03 22:24:20,730 - __main__ - INFO - 保留最新日志文件: startup.log
+2025-06-03 22:24:20,730 - __main__ - INFO - logs目录清理完成，删除了 0 个旧日志文件
+2025-06-03 22:24:20,730 - __main__ - INFO - 保留受保护的目录: cookies
+2025-06-03 22:24:20,730 - __main__ - INFO - ✓ 缓存清理完成: 删除了 0 个文件, 2 个目录
+2025-06-03 22:24:20,730 - __main__ - INFO - ✓ 重新创建必要的缓存目录
+2025-06-03 22:24:20,730 - __main__ - INFO - 正在检查系统依赖...
+2025-06-03 22:24:20,819 - __main__ - INFO - ✓ 基础Python包检查完成
+2025-06-03 22:24:20,819 - __main__ - INFO - ✓ Chrome浏览器检查完成
+2025-06-03 22:24:20,819 - __main__ - INFO - 正在初始化WebDriver...
+2025-06-03 22:24:20,863 - __main__ - INFO - 找到本地chromedriver: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/drivers/chromedriver-mac-arm64/chromedriver
+2025-06-03 22:24:21,542 - __main__ - INFO - ✓ 本地chromedriver验证成功
+2025-06-03 22:24:21,542 - __main__ - INFO - 正在预初始化爬虫组件...
+2025-06-03 22:24:21,546 - __main__ - INFO - ✓ 爬虫组件预初始化完成
+2025-06-03 22:24:21,546 - __main__ - INFO - 所有初始化步骤完成，用时: 0.82秒
+2025-06-03 22:24:21,546 - __main__ - INFO - 正在启动Flask应用...
+2025-06-03 22:24:21,549 - __main__ - INFO - 所有服务初始化完成！
+2025-06-03 22:24:21,550 - __main__ - INFO - ==================================================
+2025-06-03 22:24:21,550 - __main__ - INFO - 小红书搜索服务已就绪
+2025-06-03 22:24:21,550 - __main__ - INFO - 访问地址: http://0.0.0.0:8080
+2025-06-03 22:24:21,550 - __main__ - INFO - 如需登录，请访问: http://0.0.0.0:8080/login
+2025-06-03 22:24:21,550 - __main__ - INFO - 默认搜索结果数量: 30 篇笔记
+2025-06-03 22:24:21,550 - __main__ - INFO - ==================================================
+2025-06-03 22:24:23,148 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:24:23] "GET / HTTP/1.1" 200 -
+2025-06-03 22:24:57,482 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:24:57] "GET / HTTP/1.1" 200 -
+2025-06-03 22:24:57,499 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:24:57] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+2025-06-03 22:24:57,501 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:24:57] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-06-03 22:24:57,502 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:24:57] "GET /js/api.js HTTP/1.1" 200 -
+2025-06-03 22:24:57,502 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:24:57] "GET /js/script.js HTTP/1.1" 200 -
+2025-06-03 22:25:01,286 - src.server.main_server - INFO - 正在初始化小红书爬虫...
+2025-06-03 22:25:01,288 - src.crawler.xiaohongshu_crawler - INFO - 成功加载Cookie文件: cache/cookies/xiaohongshu_cookies.json, 包含 12 个cookie
+2025-06-03 22:25:01,288 - src.crawler.xiaohongshu_crawler - INFO - 小红书爬虫初始化完成
+2025-06-03 22:25:01,289 - src.crawler.xiaohongshu_crawler - INFO - HTML存储回调函数已设置
+2025-06-03 22:25:01,289 - src.server.main_server - INFO - 小红书爬虫初始化成功
+2025-06-03 22:25:01,290 - src.crawler.xiaohongshu_crawler - INFO - 开始搜索关键词: 露营
+2025-06-03 22:25:01,290 - src.crawler.xiaohongshu_crawler - INFO - 正在初始化Selenium...
+2025-06-03 22:25:01,291 - src.crawler.xiaohongshu_crawler - INFO - 使用本地ChromeDriver: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/drivers/chromedriver-mac-arm64/chromedriver
+2025-06-03 22:25:02,175 - src.crawler.xiaohongshu_crawler - INFO - Chrome浏览器已成功启动
+2025-06-03 22:25:02,176 - src.crawler.xiaohongshu_crawler - INFO - 尝试添加cookie...
+2025-06-03 22:25:20,700 - src.crawler.xiaohongshu_crawler - INFO - 已添加cookie并刷新页面
+2025-06-03 22:25:20,702 - src.crawler.xiaohongshu_crawler - INFO - Selenium初始化成功
+2025-06-03 22:25:20,702 - src.crawler.xiaohongshu_crawler - INFO - 开始使用Selenium搜索: 露营
+2025-06-03 22:25:20,702 - src.crawler.xiaohongshu_crawler - INFO - 搜索URL: https://www.xiaohongshu.com/search_result?keyword=%E9%9C%B2%E8%90%A5&source=web_search&type=comprehensive
+2025-06-03 22:25:20,702 - src.crawler.xiaohongshu_crawler - INFO - 使用三种提取策略
+2025-06-03 22:25:34,806 - src.crawler.xiaohongshu_crawler - INFO - 页面元素加载完成
+2025-06-03 22:25:34,812 - src.crawler.xiaohongshu_crawler - INFO - 当前页面URL: https://www.xiaohongshu.com/search_result/?keyword=%E9%9C%B2%E8%90%A5&source=web_search&type=comprehensive
+2025-06-03 22:25:34,812 - src.crawler.xiaohongshu_crawler - INFO - 页面标题: 露营 - 小红书搜索
+2025-06-03 22:25:34,829 - src.crawler.xiaohongshu_crawler - INFO - 已保存页面源码: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/page_source_0f299ef48207c680994a9809a728d4a5.html
+2025-06-03 22:25:34,844 - src.crawler.xiaohongshu_crawler - WARNING - 检测到反爬虫机制或登录要求
+2025-06-03 22:25:34,882 - src.crawler.xiaohongshu_crawler - INFO - 成功点击关闭按钮: //div[contains(@class, 'close')]
+2025-06-03 22:25:36,887 - src.crawler.xiaohongshu_crawler - INFO - 开始滚动页面以加载内容
+2025-06-03 22:25:38,896 - src.crawler.xiaohongshu_crawler - INFO - 第1次滚动完成
+2025-06-03 22:25:40,903 - src.crawler.xiaohongshu_crawler - INFO - 第2次滚动完成
+2025-06-03 22:25:42,911 - src.crawler.xiaohongshu_crawler - INFO - 第3次滚动完成
+2025-06-03 22:25:43,608 - src.crawler.xiaohongshu_crawler - INFO - 已保存搜索结果截图: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_0f299ef48207c680994a9809a728d4a5.png
+2025-06-03 22:25:43,608 - src.crawler.xiaohongshu_crawler - INFO - === 开始使用三种提取策略 ===
+2025-06-03 22:25:43,608 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略1: CSS选择器方法 ---
+2025-06-03 22:25:43,608 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 1: div.note-item
+2025-06-03 22:25:43,614 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:25:43,614 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 2: div[data-noteid]
+2025-06-03 22:25:43,620 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:25:43,620 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 3: div[class*='note']
+2025-06-03 22:25:43,626 - src.crawler.xiaohongshu_crawler - INFO - 找到 21 个元素
+2025-06-03 22:25:43,681 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜
+露营火锅炉
+沉浸式雨天露营
+露营点
+露营营地...
+2025-06-03 22:25:43,711 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜...
+2025-06-03 22:25:43,721 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 露营火锅炉
+沉浸式雨天露营
+露营点
+露营营地...
+2025-06-03 22:25:43,730 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 露营火锅炉...
+2025-06-03 22:25:43,740 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 沉浸式雨天露营...
+2025-06-03 22:25:43,740 - src.crawler.xiaohongshu_crawler - INFO - 策略1成功，使用选择器: div[class*='note']
+2025-06-03 22:25:43,740 - src.crawler.xiaohongshu_crawler - INFO - --- 策略1完成，共提取 5 条笔记 ---
+2025-06-03 22:25:43,740 - src.crawler.xiaohongshu_crawler - INFO - 策略1 - CSS选择器方法，提取到 5 条笔记
+2025-06-03 22:25:43,740 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略2: URL模式匹配方法 ---
+2025-06-03 22:25:43,746 - src.crawler.xiaohongshu_crawler - INFO - 页面总链接数: 131
+2025-06-03 22:25:44,694 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/explore/' 的链接: 25 个
+2025-06-03 22:25:45,552 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/discovery/' 的链接: 0 个
+2025-06-03 22:25:46,389 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/note/' 的链接: 0 个
+2025-06-03 22:25:47,273 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/item/' 的链接: 0 个
+2025-06-03 22:25:48,140 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/detail/' 的链接: 0 个
+2025-06-03 22:25:48,222 - src.crawler.xiaohongshu_crawler - INFO - 去重后的笔记链接: 25 个
+2025-06-03 22:25:48,319 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_681f27230000000022005428...
+2025-06-03 22:25:48,330 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_66f0df6e000000001b020202...
+2025-06-03 22:25:48,342 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67d6adc8000000001d014b44...
+2025-06-03 22:25:48,411 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67b163db000000002503ff22...
+2025-06-03 22:25:48,424 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_6785e5e8000000001a01f899...
+2025-06-03 22:25:48,436 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67bfbaf20000000029031942...
+2025-06-03 22:25:48,448 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_663795a6000000001e01c9ca...
+2025-06-03 22:25:48,495 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_6731ae5d000000001b02ab52...
+2025-06-03 22:25:48,508 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_673db3e00000000002019838...
+2025-06-03 22:25:48,519 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67fb3de8000000001c00aa4e...
+2025-06-03 22:25:48,519 - src.crawler.xiaohongshu_crawler - INFO - --- 策略2完成，共提取 10 条笔记 ---
+2025-06-03 22:25:48,519 - src.crawler.xiaohongshu_crawler - INFO - 策略2 - URL模式匹配方法，提取到 10 条笔记
+2025-06-03 22:25:48,519 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略3: DOM结构分析方法 ---
+2025-06-03 22:25:48,519 - src.crawler.xiaohongshu_crawler - INFO - 搜索包含关键词 '露营' 的元素
+2025-06-03 22:25:48,527 - src.crawler.xiaohongshu_crawler - INFO - XPath '//*[contains(text(), '露营')]' 找到 43 个元素
+2025-06-03 22:25:48,533 - src.crawler.xiaohongshu_crawler - INFO - XPath '//div[contains(text(), '露营')]' 找到 0 个元素
+2025-06-03 22:25:48,541 - src.crawler.xiaohongshu_crawler - INFO - XPath '//span[contains(text(), '露营')]' 找到 41 个元素
+2025-06-03 22:25:48,548 - src.crawler.xiaohongshu_crawler - INFO - XPath '//p[contains(text(), '露营')]' 找到 0 个元素
+2025-06-03 22:25:48,555 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h1[contains(text(), '露营')]' 找到 0 个元素
+2025-06-03 22:25:48,561 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h2[contains(text(), '露营')]' 找到 0 个元素
+2025-06-03 22:25:48,567 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h3[contains(text(), '露营')]' 找到 0 个元素
+2025-06-03 22:25:48,567 - src.crawler.xiaohongshu_crawler - INFO - 总共找到 84 个包含关键词的元素
+2025-06-03 22:25:49,010 - src.crawler.xiaohongshu_crawler - INFO - --- 策略3完成，共提取 0 条笔记 ---
+2025-06-03 22:25:49,010 - src.crawler.xiaohongshu_crawler - INFO - 策略3 - DOM结构分析方法，提取到 0 条笔记
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - 已移除 5 条无效URL的笔记
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - === 搜索完成 ===
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - strategy1结果: 5 条
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - strategy2结果: 10 条
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - strategy3结果: 0 条
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - 去重后总计: 15 条
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - URL验证后: 10 条
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - 最终返回: 10 条
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - 搜索成功，找到 10 条笔记
+2025-06-03 22:25:49,011 - src.crawler.xiaohongshu_crawler - INFO - 数据已缓存: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_0f299ef48207c680994a9809a728d4a5.json
+2025-06-03 22:25:49,012 - src.crawler.xiaohongshu_crawler - INFO - HTML结果页面已生成: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/results/search_0f299ef48207c680994a9809a728d4a5.html
+2025-06-03 22:25:49,012 - src.server.main_server - INFO - HTML内容已存储到内存缓存: 0f299ef48207c680994a9809a728d4a5
+2025-06-03 22:25:49,012 - src.crawler.xiaohongshu_crawler - INFO - HTML内容已通过回调函数传递: 0f299ef48207c680994a9809a728d4a5
+2025-06-03 22:25:49,013 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:25:49] "GET /api/search?keyword=露营&max_results=21&use_cache=true HTTP/1.1" 200 -
+2025-06-03 22:25:49,028 - src.server.main_server - INFO - 从内存缓存返回HTML内容: 0f299ef48207c680994a9809a728d4a5
+2025-06-03 22:25:49,029 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:25:49] "GET /api/result-html/0f299ef48207c680994a9809a728d4a5 HTTP/1.1" 200 -
+2025-06-03 22:26:16,481 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:16] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-03 22:26:16,501 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:16] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+2025-06-03 22:26:16,503 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:16] "[36mGET /js/api.js HTTP/1.1[0m" 304 -
+2025-06-03 22:26:16,504 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:16] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-06-03 22:26:16,506 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:16] "[36mGET /js/script.js HTTP/1.1[0m" 304 -
+2025-06-03 22:26:25,952 - src.crawler.xiaohongshu_crawler - INFO - 开始搜索关键词: 上海露营地
+2025-06-03 22:26:25,953 - src.crawler.xiaohongshu_crawler - INFO - 开始使用Selenium搜索: 上海露营地
+2025-06-03 22:26:25,953 - src.crawler.xiaohongshu_crawler - INFO - 搜索URL: https://www.xiaohongshu.com/search_result?keyword=%E4%B8%8A%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&source=web_search&type=comprehensive
+2025-06-03 22:26:25,953 - src.crawler.xiaohongshu_crawler - INFO - 使用三种提取策略
+2025-06-03 22:26:41,089 - src.crawler.xiaohongshu_crawler - INFO - 页面元素加载完成
+2025-06-03 22:26:41,095 - src.crawler.xiaohongshu_crawler - INFO - 当前页面URL: https://www.xiaohongshu.com/search_result/?keyword=%E4%B8%8A%E6%B5%B7%E9%9C%B2%E8%90%A5%E5%9C%B0&source=web_search&type=comprehensive
+2025-06-03 22:26:41,095 - src.crawler.xiaohongshu_crawler - INFO - 页面标题: 上海露营地 - 小红书搜索
+2025-06-03 22:26:41,111 - src.crawler.xiaohongshu_crawler - INFO - 已保存页面源码: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/page_source_5338a07d5960ea06ebded26befc917d7.html
+2025-06-03 22:26:41,126 - src.crawler.xiaohongshu_crawler - WARNING - 检测到反爬虫机制或登录要求
+2025-06-03 22:26:41,161 - src.crawler.xiaohongshu_crawler - INFO - 成功点击关闭按钮: //div[contains(@class, 'close')]
+2025-06-03 22:26:43,163 - src.crawler.xiaohongshu_crawler - INFO - 开始滚动页面以加载内容
+2025-06-03 22:26:45,169 - src.crawler.xiaohongshu_crawler - INFO - 第1次滚动完成
+2025-06-03 22:26:47,177 - src.crawler.xiaohongshu_crawler - INFO - 第2次滚动完成
+2025-06-03 22:26:49,184 - src.crawler.xiaohongshu_crawler - INFO - 第3次滚动完成
+2025-06-03 22:26:49,888 - src.crawler.xiaohongshu_crawler - INFO - 已保存搜索结果截图: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_5338a07d5960ea06ebded26befc917d7.png
+2025-06-03 22:26:49,888 - src.crawler.xiaohongshu_crawler - INFO - === 开始使用三种提取策略 ===
+2025-06-03 22:26:49,888 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略1: CSS选择器方法 ---
+2025-06-03 22:26:49,888 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 1: div.note-item
+2025-06-03 22:26:49,895 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:26:49,895 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 2: div[data-noteid]
+2025-06-03 22:26:49,901 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:26:49,901 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 3: div[class*='note']
+2025-06-03 22:26:49,908 - src.crawler.xiaohongshu_crawler - INFO - 找到 21 个元素
+2025-06-03 22:26:49,964 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜
+上海露营地排名
+上海市内露营
+上海能开车进去的露...
+2025-06-03 22:26:49,973 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜...
+2025-06-03 22:26:49,984 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 上海露营地排名
+上海市内露营
+上海能开车进去的露营地
+上海诺...
+2025-06-03 22:26:49,994 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 上海露营地排名...
+2025-06-03 22:26:50,004 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 上海市内露营...
+2025-06-03 22:26:50,004 - src.crawler.xiaohongshu_crawler - INFO - 策略1成功，使用选择器: div[class*='note']
+2025-06-03 22:26:50,004 - src.crawler.xiaohongshu_crawler - INFO - --- 策略1完成，共提取 5 条笔记 ---
+2025-06-03 22:26:50,004 - src.crawler.xiaohongshu_crawler - INFO - 策略1 - CSS选择器方法，提取到 5 条笔记
+2025-06-03 22:26:50,004 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略2: URL模式匹配方法 ---
+2025-06-03 22:26:50,010 - src.crawler.xiaohongshu_crawler - INFO - 页面总链接数: 129
+2025-06-03 22:26:50,972 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/explore/' 的链接: 25 个
+2025-06-03 22:26:51,806 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/discovery/' 的链接: 0 个
+2025-06-03 22:26:52,662 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/note/' 的链接: 0 个
+2025-06-03 22:26:53,530 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/item/' 的链接: 0 个
+2025-06-03 22:26:54,377 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/detail/' 的链接: 0 个
+2025-06-03 22:26:54,492 - src.crawler.xiaohongshu_crawler - INFO - 去重后的笔记链接: 25 个
+2025-06-03 22:26:54,556 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67d131490000000029027176...
+2025-06-03 22:26:54,602 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67ebeb4b000000001d005d72...
+2025-06-03 22:26:54,614 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_673bedda0000000007026f9a...
+2025-06-03 22:26:54,626 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_68330ac80000000023013936...
+2025-06-03 22:26:54,637 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_646c99c0000000000703878f...
+2025-06-03 22:26:54,711 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_682023aa0000000012003bb3...
+2025-06-03 22:26:54,723 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_666ad44c00000000060054f2...
+2025-06-03 22:26:54,735 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67d1516600000000090158c7...
+2025-06-03 22:26:54,747 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67ce8205000000001201feac...
+2025-06-03 22:26:54,759 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67e65bd8000000000900ce66...
+2025-06-03 22:26:54,759 - src.crawler.xiaohongshu_crawler - INFO - --- 策略2完成，共提取 10 条笔记 ---
+2025-06-03 22:26:54,759 - src.crawler.xiaohongshu_crawler - INFO - 策略2 - URL模式匹配方法，提取到 10 条笔记
+2025-06-03 22:26:54,759 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略3: DOM结构分析方法 ---
+2025-06-03 22:26:54,759 - src.crawler.xiaohongshu_crawler - INFO - 搜索包含关键词 '上海露营地' 的元素
+2025-06-03 22:26:54,800 - src.crawler.xiaohongshu_crawler - INFO - XPath '//*[contains(text(), '上海露营地')]' 找到 5 个元素
+2025-06-03 22:26:54,807 - src.crawler.xiaohongshu_crawler - INFO - XPath '//div[contains(text(), '上海露营地')]' 找到 0 个元素
+2025-06-03 22:26:54,813 - src.crawler.xiaohongshu_crawler - INFO - XPath '//span[contains(text(), '上海露营地')]' 找到 3 个元素
+2025-06-03 22:26:54,819 - src.crawler.xiaohongshu_crawler - INFO - XPath '//p[contains(text(), '上海露营地')]' 找到 0 个元素
+2025-06-03 22:26:54,826 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h1[contains(text(), '上海露营地')]' 找到 0 个元素
+2025-06-03 22:26:54,831 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h2[contains(text(), '上海露营地')]' 找到 0 个元素
+2025-06-03 22:26:54,838 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h3[contains(text(), '上海露营地')]' 找到 0 个元素
+2025-06-03 22:26:54,838 - src.crawler.xiaohongshu_crawler - INFO - 总共找到 8 个包含关键词的元素
+2025-06-03 22:26:54,869 - src.crawler.xiaohongshu_crawler - INFO - --- 策略3完成，共提取 0 条笔记 ---
+2025-06-03 22:26:54,869 - src.crawler.xiaohongshu_crawler - INFO - 策略3 - DOM结构分析方法，提取到 0 条笔记
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - 已移除 5 条无效URL的笔记
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - === 搜索完成 ===
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - strategy1结果: 5 条
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - strategy2结果: 10 条
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - strategy3结果: 0 条
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - 去重后总计: 15 条
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - URL验证后: 10 条
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - 最终返回: 10 条
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - 搜索成功，找到 10 条笔记
+2025-06-03 22:26:54,870 - src.crawler.xiaohongshu_crawler - INFO - 数据已缓存: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_5338a07d5960ea06ebded26befc917d7.json
+2025-06-03 22:26:54,871 - src.crawler.xiaohongshu_crawler - INFO - HTML结果页面已生成: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/results/search_5338a07d5960ea06ebded26befc917d7.html
+2025-06-03 22:26:54,871 - src.server.main_server - INFO - HTML内容已存储到内存缓存: 5338a07d5960ea06ebded26befc917d7
+2025-06-03 22:26:54,871 - src.crawler.xiaohongshu_crawler - INFO - HTML内容已通过回调函数传递: 5338a07d5960ea06ebded26befc917d7
+2025-06-03 22:26:54,872 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:54] "GET /api/search?keyword=上海露营地&max_results=21&use_cache=true HTTP/1.1" 200 -
+2025-06-03 22:26:54,891 - src.server.main_server - INFO - 从内存缓存返回HTML内容: 5338a07d5960ea06ebded26befc917d7
+2025-06-03 22:26:54,892 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:26:54] "GET /api/result-html/5338a07d5960ea06ebded26befc917d7 HTTP/1.1" 200 -
+2025-06-03 22:27:01,639 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:01] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-03 22:27:01,654 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:01] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+2025-06-03 22:27:01,655 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:01] "[36mGET /js/api.js HTTP/1.1[0m" 304 -
+2025-06-03 22:27:01,656 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:01] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-06-03 22:27:01,657 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:01] "[36mGET /js/script.js HTTP/1.1[0m" 304 -
+2025-06-03 22:27:03,238 - src.crawler.xiaohongshu_crawler - INFO - 开始搜索关键词: 连衣裙
+2025-06-03 22:27:03,238 - src.crawler.xiaohongshu_crawler - INFO - 开始使用Selenium搜索: 连衣裙
+2025-06-03 22:27:03,238 - src.crawler.xiaohongshu_crawler - INFO - 搜索URL: https://www.xiaohongshu.com/search_result?keyword=%E8%BF%9E%E8%A1%A3%E8%A3%99&source=web_search&type=comprehensive
+2025-06-03 22:27:03,238 - src.crawler.xiaohongshu_crawler - INFO - 使用三种提取策略
+2025-06-03 22:27:17,593 - src.crawler.xiaohongshu_crawler - INFO - 页面元素加载完成
+2025-06-03 22:27:17,598 - src.crawler.xiaohongshu_crawler - INFO - 当前页面URL: https://www.xiaohongshu.com/search_result/?keyword=%E8%BF%9E%E8%A1%A3%E8%A3%99&source=web_search&type=comprehensive
+2025-06-03 22:27:17,598 - src.crawler.xiaohongshu_crawler - INFO - 页面标题: 连衣裙 - 小红书搜索
+2025-06-03 22:27:17,614 - src.crawler.xiaohongshu_crawler - INFO - 已保存页面源码: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/page_source_1493b706df45a27c93abb35ae8848673.html
+2025-06-03 22:27:17,629 - src.crawler.xiaohongshu_crawler - WARNING - 检测到反爬虫机制或登录要求
+2025-06-03 22:27:17,665 - src.crawler.xiaohongshu_crawler - INFO - 成功点击关闭按钮: //div[contains(@class, 'close')]
+2025-06-03 22:27:19,667 - src.crawler.xiaohongshu_crawler - INFO - 开始滚动页面以加载内容
+2025-06-03 22:27:21,676 - src.crawler.xiaohongshu_crawler - INFO - 第1次滚动完成
+2025-06-03 22:27:23,684 - src.crawler.xiaohongshu_crawler - INFO - 第2次滚动完成
+2025-06-03 22:27:25,691 - src.crawler.xiaohongshu_crawler - INFO - 第3次滚动完成
+2025-06-03 22:27:26,450 - src.crawler.xiaohongshu_crawler - INFO - 已保存搜索结果截图: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_1493b706df45a27c93abb35ae8848673.png
+2025-06-03 22:27:26,450 - src.crawler.xiaohongshu_crawler - INFO - === 开始使用三种提取策略 ===
+2025-06-03 22:27:26,450 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略1: CSS选择器方法 ---
+2025-06-03 22:27:26,450 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 1: div.note-item
+2025-06-03 22:27:26,456 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:27:26,456 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 2: div[data-noteid]
+2025-06-03 22:27:26,462 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:27:26,462 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 3: div[class*='note']
+2025-06-03 22:27:26,469 - src.crawler.xiaohongshu_crawler - INFO - 找到 21 个元素
+2025-06-03 22:27:26,519 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜
+比较日常的连衣裙
+连衣裙版单
+收腰连衣裙
+显贵感...
+2025-06-03 22:27:26,529 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜...
+2025-06-03 22:27:26,539 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 比较日常的连衣裙
+连衣裙版单
+收腰连衣裙
+显贵感连衣裙...
+2025-06-03 22:27:26,550 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 比较日常的连衣裙...
+2025-06-03 22:27:26,560 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 连衣裙版单...
+2025-06-03 22:27:26,560 - src.crawler.xiaohongshu_crawler - INFO - 策略1成功，使用选择器: div[class*='note']
+2025-06-03 22:27:26,560 - src.crawler.xiaohongshu_crawler - INFO - --- 策略1完成，共提取 5 条笔记 ---
+2025-06-03 22:27:26,560 - src.crawler.xiaohongshu_crawler - INFO - 策略1 - CSS选择器方法，提取到 5 条笔记
+2025-06-03 22:27:26,560 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略2: URL模式匹配方法 ---
+2025-06-03 22:27:26,567 - src.crawler.xiaohongshu_crawler - INFO - 页面总链接数: 131
+2025-06-03 22:27:27,574 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/explore/' 的链接: 25 个
+2025-06-03 22:27:28,470 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/discovery/' 的链接: 0 个
+2025-06-03 22:27:29,309 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/note/' 的链接: 0 个
+2025-06-03 22:27:30,185 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/item/' 的链接: 0 个
+2025-06-03 22:27:31,104 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/detail/' 的链接: 0 个
+2025-06-03 22:27:31,192 - src.crawler.xiaohongshu_crawler - INFO - 去重后的笔记链接: 25 个
+2025-06-03 22:27:31,295 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_66dda9de000000001e0192a0...
+2025-06-03 22:27:31,306 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_6809c7e60000000009016859...
+2025-06-03 22:27:31,317 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67bdcc9b000000002900a63c...
+2025-06-03 22:27:31,526 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_6831ab0c0000000021006bb7...
+2025-06-03 22:27:31,569 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_66a5c362000000002701c5e2...
+2025-06-03 22:27:31,596 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_66931c88000000002500019b...
+2025-06-03 22:27:31,607 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_681b69720000000021000794...
+2025-06-03 22:27:31,653 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67dee01c000000001c00cda5...
+2025-06-03 22:27:31,665 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_68121f4b0000000021018795...
+2025-06-03 22:27:31,677 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_66aa05dd000000000d032e35...
+2025-06-03 22:27:31,677 - src.crawler.xiaohongshu_crawler - INFO - --- 策略2完成，共提取 10 条笔记 ---
+2025-06-03 22:27:31,677 - src.crawler.xiaohongshu_crawler - INFO - 策略2 - URL模式匹配方法，提取到 10 条笔记
+2025-06-03 22:27:31,677 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略3: DOM结构分析方法 ---
+2025-06-03 22:27:31,677 - src.crawler.xiaohongshu_crawler - INFO - 搜索包含关键词 '连衣裙' 的元素
+2025-06-03 22:27:31,685 - src.crawler.xiaohongshu_crawler - INFO - XPath '//*[contains(text(), '连衣裙')]' 找到 20 个元素
+2025-06-03 22:27:31,691 - src.crawler.xiaohongshu_crawler - INFO - XPath '//div[contains(text(), '连衣裙')]' 找到 0 个元素
+2025-06-03 22:27:31,698 - src.crawler.xiaohongshu_crawler - INFO - XPath '//span[contains(text(), '连衣裙')]' 找到 18 个元素
+2025-06-03 22:27:31,704 - src.crawler.xiaohongshu_crawler - INFO - XPath '//p[contains(text(), '连衣裙')]' 找到 0 个元素
+2025-06-03 22:27:31,709 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h1[contains(text(), '连衣裙')]' 找到 0 个元素
+2025-06-03 22:27:31,715 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h2[contains(text(), '连衣裙')]' 找到 0 个元素
+2025-06-03 22:27:31,721 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h3[contains(text(), '连衣裙')]' 找到 0 个元素
+2025-06-03 22:27:31,721 - src.crawler.xiaohongshu_crawler - INFO - 总共找到 38 个包含关键词的元素
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - --- 策略3完成，共提取 0 条笔记 ---
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - 策略3 - DOM结构分析方法，提取到 0 条笔记
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - 已移除 5 条无效URL的笔记
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - === 搜索完成 ===
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - strategy1结果: 5 条
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - strategy2结果: 10 条
+2025-06-03 22:27:31,914 - src.crawler.xiaohongshu_crawler - INFO - strategy3结果: 0 条
+2025-06-03 22:27:31,915 - src.crawler.xiaohongshu_crawler - INFO - 去重后总计: 15 条
+2025-06-03 22:27:31,915 - src.crawler.xiaohongshu_crawler - INFO - URL验证后: 10 条
+2025-06-03 22:27:31,915 - src.crawler.xiaohongshu_crawler - INFO - 最终返回: 10 条
+2025-06-03 22:27:31,915 - src.crawler.xiaohongshu_crawler - INFO - 搜索成功，找到 10 条笔记
+2025-06-03 22:27:31,916 - src.crawler.xiaohongshu_crawler - INFO - 数据已缓存: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_1493b706df45a27c93abb35ae8848673.json
+2025-06-03 22:27:31,916 - src.crawler.xiaohongshu_crawler - INFO - HTML结果页面已生成: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/results/search_1493b706df45a27c93abb35ae8848673.html
+2025-06-03 22:27:31,916 - src.server.main_server - INFO - HTML内容已存储到内存缓存: 1493b706df45a27c93abb35ae8848673
+2025-06-03 22:27:31,916 - src.crawler.xiaohongshu_crawler - INFO - HTML内容已通过回调函数传递: 1493b706df45a27c93abb35ae8848673
+2025-06-03 22:27:31,917 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:31] "GET /api/search?keyword=连衣裙&max_results=21&use_cache=true HTTP/1.1" 200 -
+2025-06-03 22:27:31,932 - src.server.main_server - INFO - 从内存缓存返回HTML内容: 1493b706df45a27c93abb35ae8848673
+2025-06-03 22:27:31,933 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:31] "GET /api/result-html/1493b706df45a27c93abb35ae8848673 HTTP/1.1" 200 -
+2025-06-03 22:27:52,790 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:52] "[36mGET / HTTP/1.1[0m" 304 -
+2025-06-03 22:27:52,807 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:52] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-06-03 22:27:52,810 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:52] "[33mGET /img/logo.png HTTP/1.1[0m" 404 -
+2025-06-03 22:27:52,812 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:52] "[36mGET /js/api.js HTTP/1.1[0m" 304 -
+2025-06-03 22:27:52,812 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:27:52] "[36mGET /js/script.js HTTP/1.1[0m" 304 -
+2025-06-03 22:27:55,065 - src.crawler.xiaohongshu_crawler - INFO - 开始搜索关键词: 耳机
+2025-06-03 22:27:55,065 - src.crawler.xiaohongshu_crawler - INFO - 开始使用Selenium搜索: 耳机
+2025-06-03 22:27:55,065 - src.crawler.xiaohongshu_crawler - INFO - 搜索URL: https://www.xiaohongshu.com/search_result?keyword=%E8%80%B3%E6%9C%BA&source=web_search&type=comprehensive
+2025-06-03 22:27:55,065 - src.crawler.xiaohongshu_crawler - INFO - 使用三种提取策略
+2025-06-03 22:28:10,554 - src.crawler.xiaohongshu_crawler - INFO - 页面元素加载完成
+2025-06-03 22:28:10,563 - src.crawler.xiaohongshu_crawler - INFO - 当前页面URL: https://www.xiaohongshu.com/search_result/?keyword=%E8%80%B3%E6%9C%BA&source=web_search&type=comprehensive
+2025-06-03 22:28:10,563 - src.crawler.xiaohongshu_crawler - INFO - 页面标题: 耳机 - 小红书搜索
+2025-06-03 22:28:10,583 - src.crawler.xiaohongshu_crawler - INFO - 已保存页面源码: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/page_source_01b6f87b8ff066734bd76dd45b9a3a38.html
+2025-06-03 22:28:10,601 - src.crawler.xiaohongshu_crawler - WARNING - 检测到反爬虫机制或登录要求
+2025-06-03 22:28:10,637 - src.crawler.xiaohongshu_crawler - INFO - 成功点击关闭按钮: //div[contains(@class, 'close')]
+2025-06-03 22:28:12,642 - src.crawler.xiaohongshu_crawler - INFO - 开始滚动页面以加载内容
+2025-06-03 22:28:14,651 - src.crawler.xiaohongshu_crawler - INFO - 第1次滚动完成
+2025-06-03 22:28:16,659 - src.crawler.xiaohongshu_crawler - INFO - 第2次滚动完成
+2025-06-03 22:28:18,667 - src.crawler.xiaohongshu_crawler - INFO - 第3次滚动完成
+2025-06-03 22:28:19,318 - src.crawler.xiaohongshu_crawler - INFO - 已保存搜索结果截图: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_01b6f87b8ff066734bd76dd45b9a3a38.png
+2025-06-03 22:28:19,318 - src.crawler.xiaohongshu_crawler - INFO - === 开始使用三种提取策略 ===
+2025-06-03 22:28:19,318 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略1: CSS选择器方法 ---
+2025-06-03 22:28:19,318 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 1: div.note-item
+2025-06-03 22:28:19,324 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:28:19,324 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 2: div[data-noteid]
+2025-06-03 22:28:19,330 - src.crawler.xiaohongshu_crawler - INFO - 找到 0 个元素
+2025-06-03 22:28:19,330 - src.crawler.xiaohongshu_crawler - INFO - 尝试选择器 3: div[class*='note']
+2025-06-03 22:28:19,337 - src.crawler.xiaohongshu_crawler - INFO - 找到 21 个元素
+2025-06-03 22:28:19,388 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜
+挂耳式耳机
+ikfzeus耳机
+最好耳机
+骨传导...
+2025-06-03 22:28:19,398 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 大家都在搜...
+2025-06-03 22:28:19,408 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 挂耳式耳机
+ikfzeus耳机
+最好耳机
+骨传导耳机...
+2025-06-03 22:28:19,418 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: 挂耳式耳机...
+2025-06-03 22:28:19,428 - src.crawler.xiaohongshu_crawler - INFO - 成功提取笔记: ikfzeus耳机...
+2025-06-03 22:28:19,428 - src.crawler.xiaohongshu_crawler - INFO - 策略1成功，使用选择器: div[class*='note']
+2025-06-03 22:28:19,428 - src.crawler.xiaohongshu_crawler - INFO - --- 策略1完成，共提取 5 条笔记 ---
+2025-06-03 22:28:19,428 - src.crawler.xiaohongshu_crawler - INFO - 策略1 - CSS选择器方法，提取到 5 条笔记
+2025-06-03 22:28:19,428 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略2: URL模式匹配方法 ---
+2025-06-03 22:28:19,434 - src.crawler.xiaohongshu_crawler - INFO - 页面总链接数: 130
+2025-06-03 22:28:20,357 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/explore/' 的链接: 25 个
+2025-06-03 22:28:21,223 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/discovery/' 的链接: 0 个
+2025-06-03 22:28:22,086 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/note/' 的链接: 0 个
+2025-06-03 22:28:22,947 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/item/' 的链接: 0 个
+2025-06-03 22:28:23,813 - src.crawler.xiaohongshu_crawler - INFO - 包含 '/detail/' 的链接: 0 个
+2025-06-03 22:28:23,898 - src.crawler.xiaohongshu_crawler - INFO - 去重后的笔记链接: 25 个
+2025-06-03 22:28:23,991 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67d7e73e000000001203d10b...
+2025-06-03 22:28:24,003 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67f4d7f3000000000b02f674...
+2025-06-03 22:28:24,014 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_681066f2000000000903ba37...
+2025-06-03 22:28:24,025 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67e22114000000001b0240f8...
+2025-06-03 22:28:24,072 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_66c6fb65000000001d018ff5...
+2025-06-03 22:28:24,084 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_682c818600000000210196a3...
+2025-06-03 22:28:24,095 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_681b2d0e000000002202dfc3...
+2025-06-03 22:28:24,106 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_67ab6e020000000018012baa...
+2025-06-03 22:28:24,151 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_6810d843000000000900ebaf...
+2025-06-03 22:28:24,165 - src.crawler.xiaohongshu_crawler - INFO - 从链接提取笔记: 小红书笔记_668cc1710000000003025202...
+2025-06-03 22:28:24,165 - src.crawler.xiaohongshu_crawler - INFO - --- 策略2完成，共提取 10 条笔记 ---
+2025-06-03 22:28:24,165 - src.crawler.xiaohongshu_crawler - INFO - 策略2 - URL模式匹配方法，提取到 10 条笔记
+2025-06-03 22:28:24,165 - src.crawler.xiaohongshu_crawler - INFO - --- 开始执行策略3: DOM结构分析方法 ---
+2025-06-03 22:28:24,166 - src.crawler.xiaohongshu_crawler - INFO - 搜索包含关键词 '耳机' 的元素
+2025-06-03 22:28:24,173 - src.crawler.xiaohongshu_crawler - INFO - XPath '//*[contains(text(), '耳机')]' 找到 26 个元素
+2025-06-03 22:28:24,179 - src.crawler.xiaohongshu_crawler - INFO - XPath '//div[contains(text(), '耳机')]' 找到 0 个元素
+2025-06-03 22:28:24,186 - src.crawler.xiaohongshu_crawler - INFO - XPath '//span[contains(text(), '耳机')]' 找到 24 个元素
+2025-06-03 22:28:24,192 - src.crawler.xiaohongshu_crawler - INFO - XPath '//p[contains(text(), '耳机')]' 找到 0 个元素
+2025-06-03 22:28:24,197 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h1[contains(text(), '耳机')]' 找到 0 个元素
+2025-06-03 22:28:24,203 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h2[contains(text(), '耳机')]' 找到 0 个元素
+2025-06-03 22:28:24,209 - src.crawler.xiaohongshu_crawler - INFO - XPath '//h3[contains(text(), '耳机')]' 找到 0 个元素
+2025-06-03 22:28:24,209 - src.crawler.xiaohongshu_crawler - INFO - 总共找到 50 个包含关键词的元素
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - --- 策略3完成，共提取 0 条笔记 ---
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - 策略3 - DOM结构分析方法，提取到 0 条笔记
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - 已移除 5 条无效URL的笔记
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - === 搜索完成 ===
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - strategy1结果: 5 条
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - strategy2结果: 10 条
+2025-06-03 22:28:24,469 - src.crawler.xiaohongshu_crawler - INFO - strategy3结果: 0 条
+2025-06-03 22:28:24,470 - src.crawler.xiaohongshu_crawler - INFO - 去重后总计: 15 条
+2025-06-03 22:28:24,470 - src.crawler.xiaohongshu_crawler - INFO - URL验证后: 10 条
+2025-06-03 22:28:24,470 - src.crawler.xiaohongshu_crawler - INFO - 最终返回: 10 条
+2025-06-03 22:28:24,470 - src.crawler.xiaohongshu_crawler - INFO - 搜索成功，找到 10 条笔记
+2025-06-03 22:28:24,470 - src.crawler.xiaohongshu_crawler - INFO - 数据已缓存: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/temp/search_01b6f87b8ff066734bd76dd45b9a3a38.json
+2025-06-03 22:28:24,471 - src.crawler.xiaohongshu_crawler - INFO - HTML结果页面已生成: /Users/derekzhou/Downloads/9-AI/Cursor workspace/xiaohongshu-search/cache/results/search_01b6f87b8ff066734bd76dd45b9a3a38.html
+2025-06-03 22:28:24,471 - src.server.main_server - INFO - HTML内容已存储到内存缓存: 01b6f87b8ff066734bd76dd45b9a3a38
+2025-06-03 22:28:24,471 - src.crawler.xiaohongshu_crawler - INFO - HTML内容已通过回调函数传递: 01b6f87b8ff066734bd76dd45b9a3a38
+2025-06-03 22:28:24,472 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:28:24] "GET /api/search?keyword=耳机&max_results=21&use_cache=true HTTP/1.1" 200 -
+2025-06-03 22:28:24,486 - src.server.main_server - INFO - 从内存缓存返回HTML内容: 01b6f87b8ff066734bd76dd45b9a3a38
+2025-06-03 22:28:24,486 - werkzeug - INFO - 127.0.0.1 - - [03/Jun/2025 22:28:24] "GET /api/result-html/01b6f87b8ff066734bd76dd45b9a3a38 HTTP/1.1" 200 -

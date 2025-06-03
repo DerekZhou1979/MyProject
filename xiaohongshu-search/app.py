@@ -39,7 +39,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def cleanup_cache():
-    """清理缓存目录中的过期文件，保留cookies目录"""
+    """清理缓存目录中的过期文件，保留cookies目录和最新的日志文件"""
     logger.info("正在清理缓存过期文件...")
     
     try:
@@ -65,6 +65,13 @@ def cleanup_cache():
                 logger.info(f"保留受保护的目录: {item}")
                 continue
             
+            # 特殊处理logs目录：只保留最新的日志文件
+            if item == 'logs' and os.path.isdir(item_path):
+                cleaned_log_files = _cleanup_logs_directory(item_path)
+                cleaned_files += cleaned_log_files
+                logger.info(f"logs目录清理完成，删除了 {cleaned_log_files} 个旧日志文件")
+                continue
+            
             try:
                 if os.path.isfile(item_path):
                     # 删除文件
@@ -84,7 +91,7 @@ def cleanup_cache():
         logger.info(f"✓ 缓存清理完成: 删除了 {cleaned_files} 个文件, {cleaned_dirs} 个目录")
         
         # 重新创建必要的目录
-        essential_dirs = ['temp', 'logs']
+        essential_dirs = ['temp', 'logs', 'results']
         for dir_name in essential_dirs:
             dir_path = os.path.join(cache_dir, dir_name)
             os.makedirs(dir_path, exist_ok=True)
@@ -95,6 +102,49 @@ def cleanup_cache():
     except Exception as e:
         logger.error(f"清理缓存时出错: {str(e)}")
         return False
+
+def _cleanup_logs_directory(logs_dir):
+    """清理logs目录，只保留最新的日志文件"""
+    try:
+        if not os.path.exists(logs_dir):
+            return 0
+        
+        # 获取所有日志文件
+        log_files = []
+        for filename in os.listdir(logs_dir):
+            file_path = os.path.join(logs_dir, filename)
+            if os.path.isfile(file_path) and filename.endswith('.log'):
+                # 获取文件的修改时间
+                mtime = os.path.getmtime(file_path)
+                log_files.append((file_path, mtime, filename))
+        
+        # 如果没有日志文件，返回
+        if not log_files:
+            return 0
+        
+        # 按修改时间排序，最新的在前
+        log_files.sort(key=lambda x: x[1], reverse=True)
+        
+        # 保留最新的日志文件，删除其他的
+        cleaned_count = 0
+        for i, (file_path, mtime, filename) in enumerate(log_files):
+            if i == 0:
+                # 保留最新的日志文件
+                logger.info(f"保留最新日志文件: {filename}")
+            else:
+                # 删除旧的日志文件
+                try:
+                    os.remove(file_path)
+                    cleaned_count += 1
+                    logger.debug(f"删除旧日志文件: {filename}")
+                except Exception as e:
+                    logger.warning(f"删除日志文件 {filename} 时出错: {str(e)}")
+        
+        return cleaned_count
+        
+    except Exception as e:
+        logger.warning(f"清理logs目录时出错: {str(e)}")
+        return 0
 
 def check_dependencies():
     """检查和安装所有依赖"""
