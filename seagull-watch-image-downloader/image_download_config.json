@@ -1,0 +1,165 @@
+{
+  "description": "海鸥表官网图片下载配置文件",
+  "base_url": "https://www.seagullwatch.com/",
+  "download_settings": {
+    "delay_between_downloads": 0.5,
+    "max_retries": 3,
+    "timeout": 30
+  },
+  "image_categories": {
+    "hero_section": [
+      {
+        "filename": "seagull_hero_flight_1963.jpg",
+        "description": "飞行系列1963的整体视觉图",
+        "keywords": ["1963", "flight", "pilot", "飞行", "飞行员", "空军", "hero", "banner", "main"]
+      },
+      {
+        "filename": "seagull_hero_ocean_star.jpg",
+        "description": "海洋系列潜水表的整体视觉图",
+        "keywords": ["ocean", "star", "dive", "diving", "water", "海洋", "潜水", "防水", "hero", "banner"]
+      },
+      {
+        "filename": "seagull_hero_master_tourbillon.jpg",
+        "description": "大师系列陀飞轮的整体视觉图",
+        "keywords": ["master", "tourbillon", "陀飞轮", "大师", "高级", "精密", "hero", "banner", "main"]
+      }
+    ],
+    "product_grid": [
+      {
+        "filename": "seagull_grid_flight_1963.jpg",
+        "description": "飞行系列 - 1963",
+        "keywords": ["1963", "flight", "pilot", "飞行", "chronograph", "计时"]
+      },
+      {
+        "filename": "seagull_grid_ocean_star.jpg",
+        "description": "探险品线 - 海洋之星",
+        "keywords": ["ocean", "star", "dive", "adventure", "海洋", "探险", "潜水"]
+      },
+      {
+        "filename": "seagull_grid_master_tourbillon.jpg",
+        "description": "大师海鸥 - 陀飞轮",
+        "keywords": ["master", "tourbillon", "陀飞轮", "大师", "skeleton", "镂空"]
+      },
+      {
+        "filename": "seagull_grid_retro_tv.jpg",
+        "description": "潮酷品线 - 复古电视",
+        "keywords": ["retro", "tv", "television", "复古", "电视", "方形", "square"]
+      },
+      {
+        "filename": "seagull_grid_craftsman_heritage.jpg",
+        "description": "大国工匠 - 如非遗系列",
+        "keywords": ["craftsman", "heritage", "工匠", "非遗", "传统", "文化", "chinese"]
+      },
+      {
+        "filename": "seagull_grid_excellent_timehasher.jpg",
+        "description": "卓越品线 - 时间有她",
+        "keywords": ["excellent", "time", "她", "女表", "lady", "women", "elegant", "卓越"]
+      },
+      {
+        "filename": "seagull_grid_pilot_other.jpg",
+        "description": "另一款飞行员表或特定型号",
+        "keywords": ["pilot", "flight", "aviation", "飞行员", "航空", "军表"]
+      },
+      {
+        "filename": "seagull_grid_straps.jpg",
+        "description": "表带或手表细节图",
+        "keywords": ["strap", "band", "leather", "metal", "表带", "皮带", "钢带", "detail"]
+      }
+    ],
+    "featured_section": [
+      {
+        "filename": "seagull_featured_masterpiece.jpg",
+        "description": "「三足金乌」或另一款大师海鸥系列的旗舰表款",
+        "keywords": ["masterpiece", "金乌", "三足", "flagship", "premium", "luxury", "master", "大师"]
+      }
+    ],
+    "showcase_section": [
+      {
+        "filename": "seagull_showcase_master.jpg",
+        "description": "大师海鸥系列代表图",
+        "keywords": ["master", "大师", "高级", "tourbillon", "skeleton", "premium"]
+      },
+      {
+        "filename": "seagull_showcase_adventure.jpg",
+        "description": "探险品线代表图",
+        "keywords": ["adventure", "探险", "sport", "outdoor", "dive", "pilot"]
+      },
+      {
+        "filename": "seagull_showcase_excellent.jpg",
+        "description": "卓越品线代表图",
+        "keywords": ["excellent", "卓越", "elegant", "dress", "formal", "classic"]
+      },
+      {
+        "filename": "seagull_showcase_trendy.jpg",
+        "description": "潮酷品线代表图",
+        "keywords": ["trendy", "潮酷", "fashion", "modern", "young", "colorful"]
+      }
+    ],
+    "news_section": [
+      {
+        "filename": "seagull_news_1.jpg",
+        "description": "匹配新闻1内容的图片",
+        "keywords": ["news", "新闻", "event", "exhibition", "发布", "活动"]
+      },
+      {
+        "filename": "seagull_news_2.jpg",
+        "description": "匹配新闻2内容的图片",
+        "keywords": ["news", "新闻", "award", "recognition", "获奖", "荣誉"]
+      },
+      {
+        "filename": "seagull_news_3.jpg",
+        "description": "匹配新闻3内容的图片",
+        "keywords": ["news", "新闻", "technology", "innovation", "技术", "创新"]
+      }
+    ],
+    "product_detail": [
+      {
+        "filename": "seagull_1963_custom_main.jpg",
+        "description": "1963表款定制页主图",
+        "keywords": ["1963", "main", "large", "detail", "close", "front", "face"]
+      },
+      {
+        "filename": "seagull_1963_custom_thumb_front.jpg",
+        "description": "缩略图 - 正面",
+        "keywords": ["1963", "front", "face", "dial", "thumb", "small"]
+      },
+      {
+        "filename": "seagull_1963_custom_thumb_side.jpg",
+        "description": "缩略图 - 侧面",
+        "keywords": ["1963", "side", "profile", "crown", "thumb", "small"]
+      },
+      {
+        "filename": "seagull_1963_custom_thumb_back.jpg",
+        "description": "缩略图 - 背面",
+        "keywords": ["1963", "back", "caseback", "movement", "thumb", "small"]
+      },
+      {
+        "filename": "seagull_1963_custom_thumb_detail.jpg",
+        "description": "缩略图 - 细节",
+        "keywords": ["1963", "detail", "close", "macro", "texture", "thumb", "small"]
+      }
+    ],
+    "related_products": [
+      {
+        "filename": "seagull_related_ocean_star.jpg",
+        "description": "海洋之星系列",
+        "keywords": ["ocean", "star", "dive", "water", "blue", "海洋"]
+      },
+      {
+        "filename": "seagull_related_master_tourbillon.jpg",
+        "description": "大师陀飞轮系列",
+        "keywords": ["master", "tourbillon", "skeleton", "陀飞轮", "大师"]
+      },
+      {
+        "filename": "seagull_related_retro_tv.jpg",
+        "description": "复古电视系列",
+        "keywords": ["retro", "tv", "square", "vintage", "复古", "电视"]
+      },
+      {
+        "filename": "seagull_related_craftsman_heritage.jpg",
+        "description": "大国工匠系列",
+        "keywords": ["craftsman", "heritage", "traditional", "工匠", "传统", "文化"]
+      }
+    ]
+  }
+} 

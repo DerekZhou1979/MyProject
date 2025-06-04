@@ -1,50 +1,46 @@
-# 图片资源目录
+# Bamford London Images
 
-本目录用于存放网站所需的图片资源。以下是网站所需的主要图片列表，您需要提供这些图片以确保网站正常显示。
+## Required Images for Website
 
-## 首页图片
+### Hero Section
+- hero-1.jpg - D300 hero image (1920x1080)
+- hero-2.jpg - Customiser hero image (1920x1080)  
+- hero-3.jpg - Collaborations hero image (1920x1080)
 
-### 轮播图片
-- `d300-hero.jpg` - D300系列轮播图（建议尺寸：1920×1080像素）
-- `nepro-hero.jpg` - Nepro系列轮播图（建议尺寸：1920×1080像素）
-- `b347-hero.jpg` - B347系列轮播图（建议尺寸：1920×1080像素）
+### Product Grid
+- d300-grid.jpg - D300 product grid image (800x600)
+- b80-grid.jpg - B80 product grid image (600x600)
+- b347-grid.jpg - B347 product grid image (600x600)
+- gmt-grid.jpg - GMT product grid image (600x600)
+- customiser-grid.jpg - Customiser grid image (800x600)
+- mayfair-grid.jpg - Mayfair product grid image (600x600)
+- collab-grid.jpg - Collaborations grid image (600x600)
+- straps-grid.jpg - Straps grid image (600x600)
 
-### 产品卡片图片
-- `d300-card.jpg` - D300系列卡片图（建议尺寸：600×600像素）
-- `b80-card.jpg` - B80系列卡片图（建议尺寸：600×600像素）
-- `b347-card.jpg` - B347系列卡片图（建议尺寸：600×600像素）
-- `gmt-card.jpg` - GMT系列卡片图（建议尺寸：600×600像素）
-- `customiser-card.jpg` - Customiser系列卡片图（建议尺寸：600×600像素）
-- `mayfair-card.jpg` - Mayfair系列卡片图（建议尺寸：600×600像素）
-- `collaborations-card.jpg` - Collaborations系列卡片图（建议尺寸：600×600像素）
-- `straps-card.jpg` - Straps系列卡片图（建议尺寸：600×600像素）
+### Featured Section
+- featured-watch.jpg - Featured product image (800x800)
 
-### 特色产品图片
-- `featured-watch.jpg` - 特色产品图片（建议尺寸：800×1000像素）
+### News Section
+- news-1.jpg, news-2.jpg, news-3.jpg - News article images (400x300)
 
-### Instagram图片
-- `instagram-1.jpg` - Instagram图片1（建议尺寸：300×300像素）
-- `instagram-2.jpg` - Instagram图片2（建议尺寸：300×300像素）
-- `instagram-3.jpg` - Instagram图片3（建议尺寸：300×300像素）
-- `instagram-4.jpg` - Instagram图片4（建议尺寸：300×300像素）
+### Brand Logos
+- tag-heuer-logo.png, zenith-logo.png, tudor-logo.png - Brand logos (200x80)
 
-## 产品详情页图片
+### Product Customizer
+- watch-preview.jpg - Main watch preview (600x600)
+- case-steel.jpg, case-black.jpg, case-rose-gold.jpg - Case options
+- dial-white.jpg, dial-black.jpg, dial-blue.jpg, dial-green.jpg - Dial options
+- strap-leather.jpg, strap-rubber.jpg, strap-bracelet.jpg - Strap options
 
-### D300产品图片
-- `d300-main.jpg` - D300主图（建议尺寸：600×600像素）
-- `d300-alt-1.jpg` - D300备选图1（建议尺寸：600×600像素）
-- `d300-alt-2.jpg` - D300备选图2（建议尺寸：600×600像素）
-- `d300-alt-3.jpg` - D300备选图3（建议尺寸：600×600像素）
-- `d300-thumb-1.jpg` - D300缩略图1（建议尺寸：100×100像素）
-- `d300-thumb-2.jpg` - D300缩略图2（建议尺寸：100×100像素）
-- `d300-thumb-3.jpg` - D300缩略图3（建议尺寸：100×100像素）
-- `d300-thumb-4.jpg` - D300缩略图4（建议尺寸：100×100像素）
+## Current Images
+- tourbillon-main.jpg - Main tourbillon watch image
+- tourbillon-back.jpg - Back view of tourbillon
+- tourbillon-side.jpg - Side view of tourbillon  
+- tourbillon-detail.jpg - Detail shot of tourbillon
+- tourbillon-thumb-1.jpg to tourbillon-thumb-4.jpg - Thumbnail images
 
-### 相关产品图片
-- `related-1.jpg` - 相关产品1（建议尺寸：300×300像素）
-- `related-2.jpg` - 相关产品2（建议尺寸：300×300像素）
-- `related-3.jpg` - 相关产品3（建议尺寸：300×300像素）
-- `related-4.jpg` - 相关产品4（建议尺寸：300×300像素）
+## Note
+For development purposes, you can use placeholder images or rename existing images to match the required filenames.
 
 ## 图片要求
 

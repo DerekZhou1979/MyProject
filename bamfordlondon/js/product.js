@@ -21,20 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // 图片切换功能
-    const mainImage = document.getElementById('main-image');
+    const mainImage = document.getElementById('main-product-image');
     const thumbs = document.querySelectorAll('.thumb');
     
     thumbs.forEach(thumb => {
         thumb.addEventListener('click', function() {
-            // 获取当前缩略图的图片路径
-            const imagePath = this.getAttribute('data-image');
-            
-            // 更新主图
-            mainImage.src = imagePath;
-            
-            // 更新active状态
+            // Remove active class from all thumbs
             thumbs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked thumb
             this.classList.add('active');
+            
+            // Change main image
+            const newImage = this.getAttribute('data-image');
+            if (mainImage && newImage) {
+                mainImage.src = newImage;
+                mainImage.style.opacity = '0';
+                setTimeout(() => {
+                    mainImage.style.opacity = '1';
+                }, 50);
+            }
         });
     });
     
@@ -96,42 +101,201 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // 加入购物车按钮
-    const addToCartBtn = document.querySelector('.add-to-cart');
+    // ===== Product Customiser Functionality =====
+    // Base price
+    const basePrice = 6500;
+    let currentPrice = basePrice;
     
-    addToCartBtn.addEventListener('click', function() {
-        const quantity = parseInt(quantityInput.value);
-        const selectedColor = document.querySelector('.color-option.active').getAttribute('data-color');
-        const selectedStrap = document.querySelector('.strap-option.active').getAttribute('data-strap');
-        
-        // 模拟添加到购物车
-        alert(`已添加到购物车：「三足金乌」三问报时金雕动偶腕表\n表壳材质：${selectedColor}\n表带：${selectedStrap}\n数量：${quantity}`);
-        
-        // 在实际应用中，这里会发送AJAX请求到服务器
+    // Selected options
+    const selectedOptions = {
+        case: { value: 'steel', price: 0 },
+        dial: { value: 'white', price: 0 },
+        strap: { value: 'leather-black', price: 0 },
+        engraving: { text: '', price: 0 }
+    };
+    
+    // Option Selection
+    const optionItems = document.querySelectorAll('.option-item');
+    
+    optionItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const optionType = this.getAttribute('data-option');
+            const optionValue = this.getAttribute('data-value');
+            const optionPrice = parseInt(this.getAttribute('data-price') || 0);
+            
+            // Remove active class from siblings
+            const siblings = this.parentElement.querySelectorAll('.option-item');
+            siblings.forEach(sibling => sibling.classList.remove('active'));
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Update selected options
+            selectedOptions[optionType] = {
+                value: optionValue,
+                price: optionPrice
+            };
+            
+            // Update price
+            updatePrice();
+            
+            // Update product image based on selection (mock functionality)
+            updateProductImage();
+        });
     });
     
-    // 选项卡切换
+    // Engraving Input
+    const engravingInput = document.querySelector('.engraving-input input');
+    if (engravingInput) {
+        engravingInput.addEventListener('input', function() {
+            const text = this.value.trim();
+            selectedOptions.engraving = {
+                text: text,
+                price: text ? 150 : 0
+            };
+            updatePrice();
+        });
+    }
+    
+    // Update Price Display
+    function updatePrice() {
+        let optionsTotal = 0;
+        
+        for (const option in selectedOptions) {
+            optionsTotal += selectedOptions[option].price;
+        }
+        
+        currentPrice = basePrice + optionsTotal;
+        
+        // Update options price display
+        const optionsPriceElement = document.querySelector('#options-price span:last-child');
+        if (optionsPriceElement) {
+            optionsPriceElement.textContent = `£${optionsTotal.toLocaleString()}`;
+        }
+        
+        // Update total price display
+        const totalPriceElement = document.getElementById('total-price');
+        if (totalPriceElement) {
+            totalPriceElement.textContent = `£${currentPrice.toLocaleString()}`;
+        }
+    }
+    
+    // Update Product Image (Mock functionality)
+    function updateProductImage() {
+        // In a real implementation, this would update the main image
+        // based on the selected options combination
+        console.log('Updating product image with options:', selectedOptions);
+    }
+    
+    // Add to Cart
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', function() {
+            const product = {
+                name: 'TAG Heuer Carrera Customised',
+                price: currentPrice,
+                options: selectedOptions,
+                quantity: 1
+            };
+            
+            console.log('Adding to cart:', product);
+            
+            // Update cart count
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                const currentCount = parseInt(cartCount.textContent) || 0;
+                cartCount.textContent = currentCount + 1;
+            }
+            
+            // Show cart panel
+            const cartPanel = document.querySelector('.cart-panel');
+            if (cartPanel) {
+                cartPanel.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Show success message
+            showNotification('Product added to cart');
+        });
+    }
+    
+    // Save Configuration
+    const saveConfigBtn = document.querySelector('.save-config-btn');
+    if (saveConfigBtn) {
+        saveConfigBtn.addEventListener('click', function() {
+            const config = {
+                product: 'TAG Heuer Carrera',
+                options: selectedOptions,
+                price: currentPrice,
+                date: new Date().toISOString()
+            };
+            
+            // Save to localStorage (in real app, would save to user account)
+            localStorage.setItem('savedConfig', JSON.stringify(config));
+            
+            showNotification('Configuration saved');
+        });
+    }
+    
+    // Product Details Tabs
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabPanes = document.querySelectorAll('.tab-pane');
     
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // 获取目标选项卡
             const targetTab = this.getAttribute('data-tab');
             
-            // 移除所有按钮的active类
+            // Remove active class from all buttons and panes
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // 为当前按钮添加active类
-            this.classList.add('active');
-            
-            // 隐藏所有选项卡内容
             tabPanes.forEach(pane => pane.classList.remove('active'));
             
-            // 显示目标选项卡内容
-            document.getElementById(targetTab).classList.add('active');
+            // Add active class to clicked button and corresponding pane
+            this.classList.add('active');
+            const targetPane = document.getElementById(targetTab);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
         });
     });
+    
+    // Show Notification
+    function showNotification(message) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--black);
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-size: 14px;
+            z-index: 3000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Fade in
+        setTimeout(() => {
+            notification.style.opacity = '1';
+        }, 10);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+    
+    // Initialize price display
+    updatePrice();
     
     // 创建产品图片占位符
     function createProductPlaceholders() {

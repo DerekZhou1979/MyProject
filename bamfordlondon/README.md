@@ -1,81 +1,108 @@
-# Bamford London 网站项目
+# Bamford London - Luxury Watch Customisation
 
-这是一个基于Bamford London官方网站风格的手表品牌网站。该项目包含了现代化的UI设计和交互功能，以展示高端手表产品。
+A luxury watch customisation website inspired by Bamford London's minimalist aesthetic and premium brand positioning.
 
-## 项目结构
+## Overview
+
+This website showcases Bamford London's luxury watch customisation services, featuring:
+- Minimalist black and white design
+- Premium watch collections (D300, B347, B80, GMT)
+- Interactive watch customiser
+- Bespoke personalisation options
+- Swiss-made, British designed timepieces
+
+## Features
+
+### Design Elements
+- **Minimalist Aesthetic**: Clean, sophisticated black and white color scheme
+- **Typography**: Modern sans-serif fonts with careful spacing
+- **Grid Layout**: Structured product showcases
+- **Smooth Animations**: Subtle transitions and hover effects
+
+### Main Pages
+1. **Homepage**
+   - Hero slider with featured collections
+   - Product grid showcasing watch collections
+   - Customiser section with partner brands
+   - Latest news and updates
+   - Newsletter subscription
+
+2. **Product Page** (TAG Heuer Carrera Customiser)
+   - Interactive customisation options
+   - Real-time price calculation
+   - Product image gallery
+   - Detailed specifications
+   - Related products
+
+### Technical Features
+- Responsive design for all devices
+- Smooth scroll animations
+- Interactive product customiser
+- Mobile-friendly navigation
+- Cart functionality
+- Search interface
+
+## Technologies Used
+
+- HTML5
+- CSS3 (with CSS Variables)
+- Vanilla JavaScript
+- Font Awesome icons
+- Responsive grid system
+
+## Project Structure
 
 ```
 bamfordlondon/
+├── index.html          # Homepage
+├── product.html        # Product customiser page
 ├── css/
-│   ├── style.css         # 全局样式
-│   └── product.css       # 产品详情页样式
+│   ├── style.css      # Main stylesheet
+│   └── product.css    # Product page styles
 ├── js/
-│   ├── script.js         # 全局JavaScript功能
-│   └── product.js        # 产品详情页JavaScript功能
-├── images/               # 图片资源目录
-├── index.html            # 网站首页
-└── product.html          # 产品详情页
+│   ├── script.js      # Main JavaScript
+│   └── product.js     # Product page functionality
+├── images/            # Product images and assets
+└── README.md          # Project documentation
 ```
 
-## 功能特点
+## Running the Website
 
-1. **响应式设计**：适配各种屏幕尺寸，从桌面到移动设备
-2. **导航系统**：
-   - 桌面端顶部导航
-   - 移动端侧边栏导航
-   - 搜索面板
-   - 购物车面板
-3. **首页功能**：
-   - 产品轮播展示
-   - 产品分类网格
-   - 特色产品展示
-   - Instagram照片流
-4. **产品详情页**：
-   - 产品图片展示（主图和缩略图）
-   - 产品选项（颜色、表带等）
-   - 产品数量控制
-   - 产品详情选项卡
-   - 相关产品推荐
+1. Navigate to the project directory:
+   ```bash
+   cd bamfordlondon
+   ```
 
-## 技术栈
+2. Start a local server:
+   ```bash
+   python3 -m http.server 8000
+   ```
 
-- HTML5
-- CSS3（使用变量、Flexbox和Grid布局）
-- 原生JavaScript
-- 响应式设计（媒体查询）
-- FontAwesome图标库
+3. Open your browser and visit:
+   ```
+   http://localhost:8000
+   ```
 
-## 使用说明
+## Customisation Options
 
-1. 克隆或下载本项目
-2. 使用现代浏览器打开`index.html`查看首页
-3. 点击任意产品卡片或"Shop now"按钮查看产品详情页
+The watch customiser allows users to personalise:
+- **Case**: Stainless Steel, Black DLC, Rose Gold PVD
+- **Dial**: White, Black, Blue, Green
+- **Strap**: Leather (Black/Brown), Rubber, Steel Bracelet
+- **Engraving**: Personal text engraving
 
-## 图片替换
+## Brand Philosophy
 
-项目中使用了placeholder.com作为图片占位符服务。在实际应用中，您需要：
+"Swiss-made, British designed" - Bamford London represents the perfect fusion of traditional Swiss watchmaking excellence and contemporary British style. Each customised timepiece is individually crafted to create a truly unique watch that reflects personal style.
 
-1. 将`images`目录中的占位图替换为实际产品图片
-2. 更新JavaScript文件中的相关代码，确保图片路径正确
+## Contact
 
-## 自定义与扩展
+Bamford London  
+80 S Audley St  
+London W1K 1JH  
++44 20 7499 4180  
+info@bamfordlondon.com
 
-### 添加新产品
+---
 
-1. 在`index.html`的产品网格中添加新的产品卡片
-2. 创建对应的产品详情页
-
-### 修改样式
-
-1. 在`:root`选择器中更新CSS变量以更改全局颜色方案
-2. 修改`style.css`和`product.css`中的相关样式规则
-
-## 注意事项
-
-- 本项目仅包含前端界面，不包含后端功能
-- 购物车、搜索和用户账户功能需要后端支持才能完全实现
-- 所有表单提交和数据处理仅为演示，需要与实际后端系统集成
-
-## 许可证
-
-本项目仅用于学习和参考目的。 
+© 2024 Bamford London. All rights reserved. 
