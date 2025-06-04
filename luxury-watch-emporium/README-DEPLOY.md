@@ -25,13 +25,13 @@
 # 2. 推送到Gitee
 git add .
 git commit -m "Deploy to Gitee Pages"
-git remote add origin https://gitee.com/你的用户名/luxury-watch-emporium.git
+git remote add origin https://gitee.com/derekzhou79/luxury-watch-emporium.git
 git push -u origin main
 
 # 3. 在Gitee仓库设置中开启Pages服务
 ```
 
-**访问地址:** `https://你的用户名.gitee.io/luxury-watch-emporium`
+**访问地址:** `https://derekzhou79.gitee.io/luxury-watch-emporium`
 
 ---
 
@@ -157,7 +157,7 @@ export default defineConfig({
 1. 购买域名
 2. 配置DNS解析：
    ```
-   CNAME record: 你的用户名.gitee.io
+   CNAME record: derekzhou79.gitee.io
    ```
 3. 在Gitee Pages设置中绑定域名
 

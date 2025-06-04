@@ -27,4 +27,4 @@ fi
 
 echo "🎉 部署准备完成！"
 echo "📌 下一步：将 dist/ 目录内容推送到 Gitee Pages"
-echo "🌐 访问地址：https://你的用户名.gitee.io/luxury-watch-emporium" 
+echo "🌐 访问地址：https://derekzhou79.gitee.io/luxury-watch-emporium" 
