@@ -1,13 +1,13 @@
 {
-  "name": "chronocraft-luxury-watch-emporium",
-  "displayName": "ChronoCraft - Luxury Watch Emporium",
+  "name": "luxury-watch-emporium",
+  "displayName": "Luxury Watch Emporium",
   "description": "An elegant e-commerce web application showcasing a fictional luxury watch brand, ChronoCraft. Users can browse products, view details, manage a shopping cart, and learn about the brand. Features AI-generated stylistic insights for products.",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "keywords": [
     "luxury-watches",
-    "ecommerce", 
+    "ecommerce",
     "react",
     "typescript",
     "vite",
@@ -18,13 +18,13 @@
     "name": "Derek Team"
   },
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/chronocraft-luxury-watch-emporium",
+  "homepage": "https://github.com/DerekZhou1979/MyProject/luxury-watch-emporium",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/chronocraft-luxury-watch-emporium.git"
+    "url": "https://github.com/DerekZhou1979/MyProject/luxury-watch-emporium.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/chronocraft-luxury-watch-emporium/issues"
+    "url": "https://github.com/DerekZhou1979/MyProject/luxury-watch-emporium/issues"
   },
   "metadata": {
     "requestFramePermissions": []
@@ -47,6 +47,7 @@
     "@types/node": "^22.14.0",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
@@ -62,8 +63,8 @@
     ],
     "development": [
       "last 1 chrome version",
-      "last 1 firefox version", 
+      "last 1 firefox version",
       "last 1 safari version"
     ]
   }
-} 
+}
